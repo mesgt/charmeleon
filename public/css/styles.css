@@ -1,1 +1,10 @@
+.container {
+    background-color: gray;
+}
 
+input{
+    resize: horizontal;
+    width: 200px;
+    width: auto;   
+    min-width: 200px;
+}
