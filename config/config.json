@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "YOUR PASSWORD",
+    "password": "root",
     "database": "crimeAde",
     "host": "127.0.0.1",
     "port": 3306,
