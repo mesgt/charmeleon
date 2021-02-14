@@ -31,20 +31,17 @@
 //     });
 //   });
 
-// POST route for saving a new post
+// POST route for saving a new report
 app.post("/api/crimeAde", function(req, res) {
-    db.Post.create({
+    db.Report.create({
         crime: req.body.crime,
-        location: req.body.location,
-        date: req.body.date,
+        location: req.body.location, //geo data?
+        date: req.body.date, //also geo data??
         description: req.body.description,
-        // attachments:
+        // attachments: lookup imgur npm
     }).then(function(dbpost) {
         res.json(dbpost);
     })
-
-
-
 });
 
 //   // DELETE route for deleting posts
