@@ -1,11 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
     var Report = sequelize.define("Report", {
-            crime: { //from drop down menu??
+            category: { //from drop down menu??
                 type: DataTypes.TEXT,
                 allowNull: false,
-                validate: {
-                    len: [1]
-                }
+                len: [1]
+
             },
             location: { //geo data??
                 type: DataTypes.TEXT,
@@ -13,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             },
             date: { //geo data??
-                type: DataTypes.TEXT,
+                type: DataTypes.DATEONLY,
                 allowNull: false,
                 len: [1]
             },

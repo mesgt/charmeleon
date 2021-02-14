@@ -19,9 +19,9 @@ $(document).ready(function() {
     });
 
     // Does a post to the report route.
-    function reportCrime(crime, location, date, description) {
-        $.post("/api/crimeAde", {
-            crime: crime,
+    function reportCrime(category, location, date, description) {
+        $.post("/api/reports", {
+            category: category,
             location: location,
             date: date,
             description: description,
