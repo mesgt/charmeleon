@@ -31,12 +31,21 @@
 //     });
 //   });
 
-//   // POST route for saving a new post
-//   app.post("/api/TABLENAME", function(req, res) {
-//     db.??.create(req.body).then(function(??) {
-//       res.json(??);
-//     });
-//   });
+// POST route for saving a new post
+app.post("/api/crimeAde", function(req, res) {
+    db.Post.create({
+        crime: req.body.crime,
+        location: req.body.location,
+        date: req.body.date,
+        description: req.body.description,
+        // attachments:
+    }).then(function(dbpost) {
+        res.json(dbpost);
+    })
+
+
+
+});
 
 //   // DELETE route for deleting posts
 //   app.delete("/api/TABLENAME/:id", function(req, res) {
