@@ -1,10 +1,125 @@
+body {
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    color: black;
+}
+
 .container {
-    background-color: gray;
+    background-color: #4472C4;
+}
+
+header {
+    background-color: #4472C4;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 input{
     resize: horizontal;
-    width: 200px;
-    width: auto;   
+    /* width: 200px; */
+    width: none;
+    width: 100%;
     min-width: 200px;
+    margin-left: 5px;
+    /* margin-right: 5px; */
+    background-color: #A5A5A5;
+}
+
+.container1 input {
+    width: 90%;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.container1 button {
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+/* nav.navbar {
+    width: 400px;
+} */
+
+.navbar {
+    background-color: #4472C4;
+}
+
+.navbar.title {
+    color: red;
+}
+
+.container1 {
+    border-style: solid;
+    border-width: 1px;
+    height: 700px;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #7F7F7F;
+}
+
+.container2 {
+    border-style: solid;
+    border-width: 1px;
+    height: 50%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #A5A5A5;
+}
+
+.container3 {
+    border-style: solid;
+    border-width: 1px;
+    height: 21.8%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #2F5597;
+}
+
+.container4 {
+    border-style: solid;
+    border-width: 1px;
+    height: 75%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #A5A5A5;
+}
+
+hr {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1.title {
+    margin: none;
+    background-color: blueviolet;
+}
+
+@media screen and (max-width: px) {
+    
+}
+
+@media screen and (max-width: px) {
+
+}
+
+@media screen and (max-width: px) {
+
+}
+
+@media screen and (max-width: px) {
+
 }
