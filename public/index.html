@@ -94,9 +94,17 @@
 				<div class="form-group">
 					<select class="custom-select" id="category">
 					  <option selected value="">Choose a crime</option>
-					  <option value="aggravated-assault">Aggravated assault</option>
-					  <option value="shoplifting">Shoplifting</option>
-					  <option value="burglary-breaking-and-entering">Burglary</option>
+					  <option id="aggravated-assault" value="aggravated-assault">Aggravated assault</option>
+					  <option id="shoplifting" value="shoplifting">Shoplifting</option>
+					  <option id="burglary-breaking-and-entering" value="burglary-breaking-and-entering">Burglary</option>
+					  <option id="hacking-computer-invasion" value="hacking-computer-invasion">Hacking/computer invasion</option>
+					  <option id="arson" value="arson">Arson</option>
+					  <option id="kidnapping-abduction" value="kidnapping-abduction">Kidnapping/abduction</option>
+					  <option id="murder-and-nonnegligent-manslaughter" value="murder-and-nonnegligent-manslaughter">Murder</option>
+					  <option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
+					  <option id="rape" value="rape">Rape</option>
+					  <option id="destruction-damage-vandalism-of-property" value="destruction-damage-vandalism-of-property">Property Damage</option>
+					  
 					</select>
 					<button type="submit" id="search-btn">Search</button>
 				</div>
@@ -109,8 +117,26 @@
 				<div id="map"></div>
 			</div>
 			<br>
-			<div class="container3">
-
+			<!-- Graph and data container -->
+			<div class="data-container">
+				<div class="row">
+					<div class="col-md-4 data-col">
+						<div class="data-box">
+							<h4 class="crime-rate-header">2019 Crime Rates</h4>
+							<h5 id="state"></h5>
+							<p id="crime"></p>
+							<div class="rate-color">
+								<p id="rate"></p>
+							</div>
+							<p id="people"></p>
+						</div>
+					</div>
+					<div class="col-md-8 graph-col">
+						<div class="graph-box">
+							<div id="chartContainer" style="height: 15rem; width: 100%;"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<br>
 			<div class="container3">

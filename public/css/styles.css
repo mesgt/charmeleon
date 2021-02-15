@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
     /* overflow-y: scroll; */
     color: black;
+    box-sizing: border-box;
 }
 
 .container {
@@ -109,15 +110,14 @@ h1.title {
 }
 
 /* ********* Google map, google map header, and chart style ************ */
-.map-header-container {
+.map-header-container,
+.data-container {
     border-style: solid;
     border-width: 1px;
-    /* height: 21.8%; */
     padding: 10px;
     border-radius: 2px;
     margin-left: 5px;
     margin-right: 5px;
-    width: 100% - 5px;
     background-color: #2F5597;
 }
 
@@ -144,6 +144,37 @@ h1.title {
     height: 100%;
     width: 100%;
 }
+
+#chartContainer {
+    color: #A5A5A5;
+    text-align: center;
+}
+
+.data-box,
+.graph-box {
+    height: 100%;
+    background-color: white;
+}
+
+.data-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.crime-rate-header {
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+.rate-color {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+/* .graph-col {
+
+} */
 
 
 @media screen and (max-width: px) {

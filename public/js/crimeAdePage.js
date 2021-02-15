@@ -19,11 +19,26 @@
 const crimeCategorySelect = $("#category");
 const crimeSearchBtn = $("#search-btn");
 const userGuideContainer = $("#user-guide-container");
+const chartCont = $("#chartContainer");
+const stateDisplay = $("#state");
+const crimeDisplay = $("#crime");
+const rateDisplay = $("#rate");
+const peopleNum = $("#people");
+const rateColor = $(".rate-color");
 
+
+let offenseDisplay;
 let offense;
+let map;
+
+let chartContText = $("<p>");
+chartContText.text("Crime trend chart will be displayed here");
+chartCont.append(chartContText);
 
 crimeSearchBtn.on("click", function() {
   offense = crimeCategorySelect.val();
+  offenseDisplay = $("#" + offense).text();
+  userGuideContainer.empty();
   const userGuideText = $("<p>").text("Click on the map!");
   userGuideContainer.append(userGuideText);
 })
@@ -82,7 +97,7 @@ const statesObj = {
   'Wyoming': ['WY', '56'],
 };
 
-let map;
+$(document).ready(initMap)
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -148,38 +163,49 @@ function initMap() {
               const stateDataObj = { state, crimeRate2019 }
               console.log(stateDataObj);
               
-              // stateText.text(state);
-              // crimeRate.text(crimeRate2019);
+              stateDisplay.text(state);;
+              crimeDisplay.text(offenseDisplay);
+              rateDisplay.text(crimeRate2019.toFixed(2));
+              peopleNum.text("per 100,000 people");
+
+              if (crimeRate2019 > 500) {
+                rateColor.css("background-color", "red");
+              } else if (crimeRate2019 > 200) {
+                rateColor.css("background-color", "orange");
+              } else if (crimeRate2019 > 100) {
+                rateColor.css("background-color", "yellow");
+              } else {
+                rateColor.css("background-color", "#5fe25f");
+              }
 
               if (showGraph) {
                 let crimeRate2018 = (offenseCount2018 / population[1]) * 100000;
                 let crimeRate2017 = (offenseCount2017 / population[2]) * 100000;
                 let crimeRate2016 = (offenseCount2016 / population[3]) * 100000;
 
-                loadChart(crimeRate2019, crimeRate2018, crimeRate2017, crimeRate2016, state);
+                loadChart(crimeRate2019, crimeRate2018, crimeRate2017, crimeRate2016, state, offenseDisplay);
                 
               } else {
-                console.log("not enough data");
-                // display in graph spot "Not enough data to show trend"
+                chartContText.text("Not enough data to show trend");
               }
              
             })
         } else {
-          stateText.text(state);
-          crimeRate.text("No Data");
+          crimeDisplay.text("No Data");
         }
       })
   })
 };
 
 // chart from canvas.js
-function loadChart(crimeRate2019, crimeRate2018, crimeRate2017, crimeRate2016, state) {
+function loadChart(crimeRate2019, crimeRate2018, crimeRate2017, crimeRate2016, state, offenseDisplay) {
 
   var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     theme: "light2",
     title:{
-      text: state + " crime rate per 100,000 people"
+      text: `${state} ${offenseDisplay} rate per 100,000 people`,
+      fontSize: 14
     },
     data: [{        
       type: "line",
