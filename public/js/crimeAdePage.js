@@ -18,11 +18,14 @@
 // ************* GOOGLE MAP AND DATA *********************************
 const crimeCategorySelect = $("#category");
 const crimeSearchBtn = $("#search-btn");
+const userGuideContainer = $("#user-guide-container");
 
 let offense;
 
 crimeSearchBtn.on("click", function() {
   offense = crimeCategorySelect.val();
+  const userGuideText = $("<p>").text("Click on the map!");
+  userGuideContainer.append(userGuideText);
 })
 
 const statesObj = { 

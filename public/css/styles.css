@@ -135,6 +135,11 @@ h1.title {
     background-color: white;
 }
 
+#user-guide-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
 #map {
     height: 100%;
     width: 100%;
