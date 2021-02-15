@@ -1,11 +1,4 @@
 
-
-DROP DATABASE IF EXISTS crimeAde;
-
-CREATE DATABASE crimeAde;
-
-USE crimeAde;
-
 CREATE TABLE crimeDenver
 (
 	id int NOT NULL AUTO_INCREMENT,
@@ -20,12 +13,12 @@ CREATE TABLE crimeDenver
 	PRIMARY KEY (id)
 );
 
-LOAD DATA INFILE 'crime_copy.csv' 
-INTO TABLE crimeDenver 
-FIELDS TERMINATED BY ',' 
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(@first_occurrence_date)
-SET 
-first_occurrence_date = STR_TO_DATE(@Ffirst_occurrence_date,'%m/%d/%Y %k:%i:%s');
+-- LOAD DATA INFILE 'crime_copy.csv' 
+-- INTO TABLE crimeDenver 
+-- FIELDS TERMINATED BY ',' 
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\n'
+-- IGNORE 1 ROWS
+-- (@first_occurrence_date)
+-- SET 
+-- first_occurrence_date = STR_TO_DATE(@Ffirst_occurrence_date,'%m/%d/%Y %k:%i:%s');
