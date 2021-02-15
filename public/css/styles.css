@@ -108,6 +108,39 @@ h1.title {
     background-color: blueviolet;
 }
 
+/* ********* Google map, google map header, and chart style ************ */
+.map-header-container {
+    border-style: solid;
+    border-width: 1px;
+    /* height: 21.8%; */
+    padding: 10px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #2F5597;
+}
+
+.map-form-header {
+    color:  #A5A5A5;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.custom-select {
+    margin-bottom: 0.5rem;
+}
+
+.map-nav {
+    background-color: white;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+
 @media screen and (max-width: px) {
     
 }
@@ -116,8 +149,12 @@ h1.title {
 
 }
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 600px) {
 
+    /* google map */
+    #map {
+        height: 25rem;
+    }
 }
 
 @media screen and (max-width: px) {
