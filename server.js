@@ -1,6 +1,8 @@
 var express = require("express");
-
+var exphbs = require("express-handlebars");
 var app = express();
+var db = require("./models");
+
 var PORT = process.env.PORT || 8080;
 
 
@@ -19,6 +21,9 @@ app.use(express.static("public"));
 // Routes
 // =============================================================
 
+require("./routes/googleMap-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+require("./routes/post-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
