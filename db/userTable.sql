@@ -6,7 +6,9 @@ CREATE TABLE userReport
     city VARCHAR(35),
     state VARCHAR(20),
     zip INT(9) NOT NULL,
+    date NOT NULL, 
     date DATE NOT NULL, 
+
     description VARCHAR(255),
 	PRIMARY KEY (id)
 );
