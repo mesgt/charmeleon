@@ -63,6 +63,13 @@ module.exports = function (app) {
     res.render("index", model);
   });
 
+  app.get("/localdata", function (req, res) {
+    const model = {
+      google_api_key: process.env.API_KEY_GOOGLE
+    }
+    res.render("local-data", model);
+  });
+
   app.get("/api/:offense/:state", function (req, res) {
     
     let state = req.params.state;
