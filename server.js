@@ -4,7 +4,10 @@ var exphbs = require("express-handlebars");
 var app = express();
 var db = require("./models");
 
+
 var PORT = process.env.PORT || 8080;
+
+var PORT = process.env.PORT || 8085;
 
 
 // Requiring our models for syncing

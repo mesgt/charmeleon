@@ -4,14 +4,32 @@ module.exports = function(sequelize, DataTypes) {
                 type: DataTypes.TEXT,
                 allowNull: false,
                 len: [1]
-
             },
-            location: { //geo data??
+            streetAddress: { 
                 type: DataTypes.TEXT,
                 allowNull: false,
                 len: [1]
             },
-            date: { //geo data??
+            city: { 
+                type: DataTypes.TEXT,
+                allowNull: false,
+                len: [1]
+            },
+            state: { 
+                type: DataTypes.TEXT,
+                allowNull: false,
+                len: [1]
+            },
+            zip: { 
+                type: DataTypes.INT,
+                allowNull: false,
+                len: [1]
+            },
+            zip: { 
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
+            date: { 
                 type: DataTypes.DATEONLY,
                 allowNull: false,
                 len: [1]

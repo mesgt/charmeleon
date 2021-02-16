@@ -3,11 +3,14 @@ var db = require("../models");
 
 module.exports = function(app) {
     // POST route for saving a new report
-    app.post("/api/reports", function(req, res) { //make reports table later
+    app.post("/api/userReport", function(req, res) { //make reports table later
         db.Report.create({
             category: req.body.category, //drop down input??
-            location: req.body.location, //geo data??
-            date: req.body.date, //also geo data??
+            streetAddress: req.body.streetAddress,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
+            date: req.body.date,
             description: req.body.description
                 // attachments: lookup imgur npm
         }).then(function(dbpost) {

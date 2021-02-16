@@ -1,5 +1,7 @@
 body {
-    overflow-x: hidden;
+
+    /* overflow-x: hidden; */
+    /* overflow-x: hidden;
     /* overflow-y: scroll; */
     color: black;
     box-sizing: border-box;
@@ -46,6 +48,8 @@ input{
     background-color: #4472C4;
 }
 
+
+
 .navbar.title {
     color: red;
 }
@@ -83,7 +87,7 @@ input{
     margin-left: 5px;
     margin-right: 5px;
     width: 100% - 5px;
-    background-color: #2F5597;
+    background-color: #4472C4;
 }
 
 .container4 {
@@ -106,7 +110,7 @@ hr {
 
 h1.title {
     margin: none;
-    background-color: blueviolet;
+    background-color: #4472C4;
 }
 
 /* ********* Google map, google map header, and chart style ************ */
