@@ -1,7 +1,5 @@
 body {
-
     /* overflow-x: hidden; */
-    /* overflow-x: hidden;
     /* overflow-y: scroll; */
     color: black;
     box-sizing: border-box;
@@ -46,12 +44,6 @@ input{
 
 .navbar {
     background-color: #4472C4;
-}
-
-
-
-.navbar.title {
-    color: red;
 }
 
 .container1 {
@@ -179,15 +171,6 @@ h1.title {
 /* .graph-col {
 
 } */
-
-
-@media screen and (max-width: px) {
-    
-}
-
-@media screen and (max-width: px) {
-
-}
 
 @media screen and (max-width: 600px) {
 
