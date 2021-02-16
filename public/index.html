@@ -36,6 +36,22 @@
 						Home
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">
+							More
+						</a>
+
+						<div class="navbar-dropdown">
+							<a href="about.html" class="navbar-item">
+								About
+							</a>
+							<a href= "contact.html" class="navbar-item">
+								Contact
+							</a>
+							<!-- <hr class="navbar-divider"> -->
+							<a href="index.html" class="navbar-item">
+								Report a crime
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -104,6 +120,35 @@
 			</div>
 			</div>
 			<br>
+					<h2>User Input: </h2>
+					<ul>
+						<li><input placeholder="Location"></li>
+						<li><input placeholder="Date"></li>
+						<li><input placeholder="Description"></li>
+						<li><button id="attach">Attach File</button></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="col-md-8">
+				<div class="container2">
+				</div>
+				<br>
+				<div class="container3">
+				</div>
+				<br>
+				<div class="container3">
+				<hr>
+				<h2>User Input: </h2>
+				<ul>
+					<li><input placeholder="Location"></li>
+					<li><input placeholder="Date"></li>
+					<li><input placeholder="Description"></li>
+					<li><button id="attach1">Attach File</button></li>
+				</ul>
+			</div>
+		</div>
+		<br>
 		<div class="col-md-8">
 			<div class="map-header-container">
 				<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
@@ -120,7 +165,6 @@
 					  <option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
 					  <option id="rape" value="rape">Rape</option>
 					  <option id="destruction-damage-vandalism-of-property" value="destruction-damage-vandalism-of-property">Property Damage</option>
-					  
 					</select>
 					<button type="submit" id="search-btn">Search</button>
 				</div>
@@ -155,20 +199,13 @@
 				</div>
 			</div>
 			<br>
-			<!-- <div class="container3">
-
-
-				</div> -->
+			<div class="container3">
+				</div>
 			</div>
-
-
 		</div>
-
 	</div>
 	<footer>
-	
 	</footer>
-
 	<!-- jQuery, google maps api, canvas.js, script  -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script
@@ -177,9 +214,5 @@
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="./js/crimeAdePage.js"></script>
 	<script src="./js/reports.js"></script>
-
-
 </body>
-
-
 </html>
