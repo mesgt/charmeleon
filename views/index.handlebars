@@ -2,12 +2,21 @@
 	<h1>See Something - Say Something: your local crime reporting app</h1>
 </header>
 
-<ul>
-  {{#each crimeAde}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-  	</li>
-  {{/each}}
-</ul>
 
 
+<div id="map" style="height: 150px;"></div>
+
+<form method="get" id="map_form">
+	<select name="offense" value="shoplifting">
+		<option value="shoplifting">shoplifting</option>
+	</select>
+	<input type="hidden" name="state" id="state_inp">
+</form>
+
+{{#each crimes}}
+<div>
+	{{incident_count}} {{data_year}}
+</div>
+{{/each}}
+
+<script src="js/maps.js"></script>
