@@ -18,8 +18,10 @@ module.exports = function(app) {
         })
     });
 
+    // GET routes for user reported data
     app.get("/api/userReport", function(req, res) {
         db.Report.findAll({}).then(function(dbPost) {
+            console.log(Report);
             res.json(dbPost);
         });
 
