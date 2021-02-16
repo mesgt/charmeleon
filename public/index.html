@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
 		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+	<link rel="stylesheet" href="./css/overwrite.css">
 	<link rel="stylesheet" href="./css/styles.css">
 	<!-- <link rel="stylesheet" type="text/html" href=".\public\css\styles.css"> -->
 </head>
@@ -76,6 +77,7 @@
 			<br>
 			<div class="container1">
 				<h2>Report a crime: </h2>
+
 				<div class="form-group">
 					<select class="custom-select" id="category">
 						<option selected value="">Choose a crime</option>
@@ -119,15 +121,93 @@
 				</div>
 				<br>
 				<div class="container3">
+				<hr>
+				<h2>User Input: </h2>
+				<ul>
+					<li><input placeholder="Location"></li>
+					<li><input placeholder="Date"></li>
+					<li><input placeholder="Description"></li>
+					<li><button id="attach">Attach File</button></li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<div class="col-md-8">
+			<div class="map-header-container">
+				<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
+				<div class="form-group">
+					<select class="custom-select" id="category">
+					  <option selected value="">Choose a crime</option>
+					  <option id="aggravated-assault" value="aggravated-assault">Aggravated assault</option>
+					  <option id="shoplifting" value="shoplifting">Shoplifting</option>
+					  <option id="burglary-breaking-and-entering" value="burglary-breaking-and-entering">Burglary</option>
+					  <option id="hacking-computer-invasion" value="hacking-computer-invasion">Hacking/computer invasion</option>
+					  <option id="arson" value="arson">Arson</option>
+					  <option id="kidnapping-abduction" value="kidnapping-abduction">Kidnapping/abduction</option>
+					  <option id="murder-and-nonnegligent-manslaughter" value="murder-and-nonnegligent-manslaughter">Murder</option>
+					  <option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
+					  <option id="rape" value="rape">Rape</option>
+					  <option id="destruction-damage-vandalism-of-property" value="destruction-damage-vandalism-of-property">Property Damage</option>
+					  
+					</select>
+					<button type="submit" id="search-btn">Search</button>
+				</div>
+			</div>
+			<!-- Tells user to click the map when a crime is searched -->
+			<div id="user-guide-container"></div>
+			<br>
+			<!-- Map container -->
+			<div class="container2">
+				<div id="map"></div>
+			</div>
+			<br>
+			<!-- Graph and data container -->
+			<div class="data-container">
+				<div class="row">
+					<div class="col-md-4 data-col">
+						<div class="data-box">
+							<h4 class="crime-rate-header">2019 Crime Rates</h4>
+							<h5 id="state"></h5>
+							<p id="crime"></p>
+							<div class="rate-color">
+								<p id="rate"></p>
+							</div>
+							<p id="people"></p>
+						</div>
+					</div>
+					<div class="col-md-8 graph-col">
+						<div class="graph-box">
+							<div id="chartContainer" style="height: 15rem; width: 100%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="container3">
+
 
 				</div>
 			</div>
 
-		</div>
-</body>
-<footer>
 
-</footer>
-<link rel="stylesheet" href="./css\overwrite.css">
+		</div>
+
+	</div>
+	<footer>
+	
+	</footer>
+
+	<!-- jQuery, google maps api, canvas.js, script  -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg5L1_F8TC6mH3ReCeF1aTiUwJ19CXlb0&callback=initMap&libraries=&v=weekly"
+	async></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="./js/crimeAdePage.js"></script>
+	<script src="./js/reports.js"></script>
+
+
+</body>
+
 
 </html>

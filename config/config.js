@@ -1,4 +1,4 @@
-const { config } = require('dotenv/types')
+// const { config } = require('dotenv/types')
 
 require('dotenv').config();
 
