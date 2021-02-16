@@ -152,8 +152,8 @@ module.exports = function (app) {
 //   });
 
   // placeholder route that loads individual user post to display details. If we have time.
-  app.get("/placeholder/:id", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/???.html"));
-  });
+  // app.get("/placeholder/:id", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/???.html"));
+  // });
 
 };

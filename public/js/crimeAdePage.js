@@ -71,7 +71,6 @@ function initMap() {
 
   map.data.addListener('click', function(event) {
     offense = crimeCategorySelect.val();
-    console.log(offense);
     offense_display = $("#" + offense).text();
     let state = event.feature.getProperty('NAME');
 
