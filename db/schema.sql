@@ -1,3 +1,5 @@
 DROP DATABASE IF EXISTS crimeAde;
 
 CREATE DATABASE crimeAde;
+
+USE crimeAde;

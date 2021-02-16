@@ -1,0 +1,10 @@
+/* May or may not need. This file is to overwrite any classes made on Bulma */
+
+/* header {
+    background-color: blue;
+} */
+
+h1.title {
+    margin: 0px 0px 0px 0px;
+    background-color: #4472C4;
+}

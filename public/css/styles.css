@@ -1,14 +1,194 @@
+body {
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+    color: black;
+    box-sizing: border-box;
+}
+
 .container {
-    background-color: gray;
+    background-color: #4472C4;
+}
+
+header {
+    background-color: #4472C4;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 input{
     resize: horizontal;
-    width: 200px;
-    width: auto;   
+    /* width: 200px; */
+    width: none;
+    width: 100%;
     min-width: 200px;
+    margin-left: 5px;
+    /* margin-right: 5px; */
+    background-color: #A5A5A5;
+}
+
+.container1 input {
+    width: 90%;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.container1 button {
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+/* nav.navbar {
+    width: 400px;
+} */
+
+.navbar {
+    background-color: #4472C4;
 }
 
 .container1 {
+    border-style: solid;
+    border-width: 1px;
+    height: 700px;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #7F7F7F;
+}
+
+.container2 {
+    border-style: solid;
+    border-width: 1px;
+    height: 50%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #A5A5A5;
+}
+
+.container3 {
+    border-style: solid;
+    border-width: 1px;
+    height: 21.8%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #4472C4;
+}
+
+.container4 {
+    border-style: solid;
+    border-width: 1px;
+    height: 75%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #A5A5A5;
+}
+
+hr {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1.title {
+    margin: none;
+    background-color: #4472C4;
+}
+
+/* ********* Google map, google map header, and chart style ************ */
+.map-header-container,
+.data-container {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #2F5597;
+}
+
+.map-form-header {
+    color:  #A5A5A5;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.custom-select {
+    margin-bottom: 0.5rem;
+}
+
+.map-nav {
+    background-color: white;
+}
+
+#user-guide-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#chartContainer {
+    color: #A5A5A5;
+    text-align: center;
+}
+
+.data-box,
+.graph-box {
+    height: 100%;
+    background-color: white;
+}
+
+.data-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.crime-rate-header {
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+.rate-color {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+/* .graph-col {
+
+} */
+
+
+@media screen and (max-width: px) {
     
+}
+
+@media screen and (max-width: px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+    /* google map */
+    #map {
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: px) {
+
 }
