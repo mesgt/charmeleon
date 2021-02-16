@@ -19,10 +19,13 @@ $(document).ready(function() {
     });
 
     // Does a post to the report route.
-    function reportCrime(category, location, date, description) {
+    function reportCrime(category, streetAddress, city, state, zip, date, description) {
         $.post("/api/reports", {
             category: category,
-            location: location,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            zip: zip,
             date: date,
             description: description,
         }).catch(handleErr);

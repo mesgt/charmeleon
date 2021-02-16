@@ -15,61 +15,61 @@
 
 <body>
 	<!-- <section class="section"> -->
-		<header>
-			<!-- <div class="container"> -->
-				<nav class="navbar" role="navigation" aria-label="main navigation">
-					<div class="navbar-brand">
-						<a href="#">
-							<img src="image.png" alt="See something say something img" width="50">
-						</a>
-						<!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+	<header>
+		<!-- <div class="container"> -->
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a href="#">
+					<img src="image.png" alt="See something say something img" width="50">
+				</a>
+				<!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
 							data-target="navbarBasicExample">
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 						</a> -->
-					</div>
+			</div>
 
-					<div id="navbarBasicExample" class="navbar-menu">
-						<div class="navbar-start">
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item">
+						Home
+					</a>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">
+							More
+						</a>
+
+						<div class="navbar-dropdown">
 							<a class="navbar-item">
-								Home
+								About
 							</a>
-							<div class="navbar-item has-dropdown is-hoverable">
-								<a class="navbar-link">
-									More
-								</a>
-
-								<div class="navbar-dropdown">
-									<a class="navbar-item">
-										About
-									</a>
-									<a class="navbar-item">
-										Contact
-									</a>
-									<!-- <hr class="navbar-divider"> -->
-									<a class="navbar-item">
-										Report a crime
-									</a>
-								</div>
-							</div>
+							<a class="navbar-item">
+								Contact
+							</a>
+							<!-- <hr class="navbar-divider"> -->
+							<a class="navbar-item">
+								Report a crime
+							</a>
 						</div>
 					</div>
+				</div>
+			</div>
 
-						<h1 class="title">
-							See Something - Say Something:
-						</h1>
+			<h1 class="title">
+				See Something - Say Something:
+			</h1>
 
-						<!-- <div class="navbar-end">
+			<!-- <div class="navbar-end">
 							<div class="navbar-item">
 							</div>
 						</div> -->
 			<!-- </div> -->
-			</nav>
-			</div>
-		</header>
+		</nav>
+		</div>
+	</header>
 	<!-- </section> -->
-		<br>
+	<br>
 	<div class="row">
 		<div class="col-md-4">
 			<input type="text" id="######" placeholder="User Address">
@@ -77,6 +77,50 @@
 			<br>
 			<div class="container1">
 				<h2>Report a crime: </h2>
+
+				<div class="form-group">
+					<select class="custom-select" id="category">
+						<option selected value="">Choose a crime</option>
+						<option id="aggravated-assault" value="aggravated-assault">Aggrevated Assault</option>
+						<option id="arson" value="arson">Arson</option>
+						<option id="burglary" value="burglary">Burglary</option>
+						<option id="auto-theft" value="auto-theft">Auto Theft</option>
+						<option id="drug-alcohol" value="drug-alcohol">Drug or Alcohol</option>
+						<option id="larceny" value="larceny">Larceny</option>
+						<option id="murder" value="murder">Murder</option>
+						<option id="theft-from-motor-vehicle" value="theft-from-motor-vehicle">Theft from Motor Vehicle
+						</option>
+						<option id="sexual-assault" value="sexual-assault">Sexual Assault</option>
+						<option id="public-disorder" value="public-disorder">Public Disorder</option>
+						<option id="robbery" value="robbery">Robbery</option>
+						<option id="traffic-accident" value="traffic-accident">Traffic Accident</option>
+						<option id="white-collar-crime" value="white-collar-crime">White Collar Crime</option>
+						<option id="other-crimes-against-persons" value="other-crimes-against-persons">Other Crimes
+							Against Persons</option>
+						<option id="all-other-crimes" value="all-other-crimes">All Other Crimes</option>
+
+					</select>
+					<hr>
+					<h2>User Input: </h2>
+					<ul>
+						<li><input placeholder="Location"></li>
+						<li><input placeholder="Date"></li>
+						<li><input placeholder="Description"></li>
+						<li><button id="attach">Attach File</button></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="col-md-8">
+				<div class="container2">
+
+				</div>
+				<br>
+				<div class="container3">
+
+				</div>
+				<br>
+				<div class="container3">
 				<hr>
 				<h2>User Input: </h2>
 				<ul>
@@ -141,7 +185,11 @@
 			<br>
 			<div class="container3">
 
+
+				</div>
 			</div>
+
+
 		</div>
 
 	</div>
@@ -157,6 +205,7 @@
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="./js/crimeAdePage.js"></script>
 	<script src="./js/reports.js"></script>
+
 
 </body>
 
