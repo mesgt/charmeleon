@@ -56,50 +56,90 @@ const statesObj = {
 
 module.exports = function (app) {
 
-  // index route loads view.html
-  // app.get("/", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/???.html"));
-  // });
-
   app.get("/", function (req, res) {
     const model = {
       google_api_key: process.env.API_KEY_GOOGLE
     }
-    // if (!req.query) 
     res.render("index", model);
-
-    // let offense = req.query.offense;
-    // let state = req.query.state;
-
-    // console.log(offense);
   });
 
-  // app.post("/api/getoffense", function (req, res) {
-  //   console.log(req.body);
-  //   res.status(200).end();
+  app.get("/api/:offense/:state", function (req, res) {
+    
+    let state = req.params.state;
+    let offense = req.params.offense;
 
-  // })
+    let stateAbb = statesObj[state][0];
+    let stateNum = statesObj[state][1];
+
+    (async () => {
+      try {
+        const[crimeResponse, popResponse] = await axios.all([
+          axios.get('https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/' + offense + '/offense/states/' + stateAbb + '/COUNT?API_KEY=' + process.env.API_KEY_FBI),
+          axios.get('https://api.census.gov/data/2019/pep/population?get=DATE_CODE,DATE_DESC,POP,NAME,STATE&for=state:' + stateNum + '&key=' + process.env.API_KEY_CENSUS)
+        ]);
+
+        const crimeResArr = crimeResponse.data.results;
+
+        let showGraph;
+        let offenseCount2019;
+        let offenseCount2018;
+        let offenseCount2017;
+        let offenseCount2016;
+        let crimeRate2019;
+        let crimeRate2018;
+        let crimeRate2017;
+        let crimeRate2016;
+        
+        if (crimeResArr.length != 0) {
+          showGraph = crimeResArr.length > 3 ? true : false;
+          offenseCount2019 = crimeResArr[crimeResArr.length-1].offense_count;
+          
+          const population = [];
+          const popData = popResponse.data;
+          for (let i = popData.length -1; i > 8; i--) {
+            population.push(popData[i][2]);
+          }
+
+          if (showGraph) {
+            offenseCount2018 = crimeResArr[crimeResArr.length-2].offense_count;
+            offenseCount2017 = crimeResArr[crimeResArr.length-3].offense_count;
+            offenseCount2016 = crimeResArr[crimeResArr.length-4].offense_count;
+            crimeRate2018 = (offenseCount2018 / population[1]) * 100000;
+            crimeRate2017 = (offenseCount2017 / population[2]) * 100000;
+            crimeRate2016 = (offenseCount2016 / population[3]) * 100000;
+          }
+
+          crimeRate2019 = (offenseCount2019 / population[0]) * 100000;
   
+          const dataObj = {
+            state,
+            crimeRate2019,
+            crimeRate2018,
+            crimeRate2017,
+            crimeRate2016
+          }
 
+          res.json(dataObj);
+          
+        } else {
+          const objNoData = {
+            state,
+            crimeRate2019: "No data to display",
+            crimeRate2018,
+            crimeRate2017,
+            crimeRate2016
+          }
 
+          res.json(objNoData);
+        }
 
-    // var options = {
-    //   method: 'GET',
-    //   url: 'https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/' + offense + '/offense/states/' + statesObj[state][0] + '/COUNT?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv',
-    // };
+      } catch(error) {
+        console.log(error);
+      }
 
-    // try {
-    //   const response = await axios.request(options)
-    //   model.crimes = response.data.results
-
-    //   console.log(model)
-
-    //   res.render("index", model);
-
-    // } catch (error) {
-    //   console.log(error);
-    // }
-
+    })();
+  })
+  
 
   // cms route loads cms.html
 //   app.get("/??", function (req, res) {
