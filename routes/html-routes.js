@@ -53,52 +53,67 @@ const statesObj = {
   'Wisconsin': ['WI', '55'],
   'Wyoming': ['WY', '56'],
 };
+
 module.exports = function (app) {
 
   // index route loads view.html
   // app.get("/", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/???.html"));
   // });
-  app.get("/", async function (req, res) {
+
+  app.get("/", function (req, res) {
     const model = {
       google_api_key: process.env.API_KEY_GOOGLE
     }
-    if (!req.query) res.render("index", model);
+    // if (!req.query) 
+    res.render("index", model);
 
-    let offense = req.query.offense;
-    let state = req.query.state;
+    // let offense = req.query.offense;
+    // let state = req.query.state;
 
-    var options = {
-      method: 'GET',
-      url: 'https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/' + offense + '/offense/states/' + statesObj[state][0] + '/COUNT?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv',
-    };
-
-    try {
-      const response = await axios.request(options)
-      model.crimes = response.data.results
-
-      console.log(model)
-
-      res.render("index", model);
-
-    } catch (error) {
-
-    }
+    // console.log(offense);
   });
+
+  // app.post("/api/getoffense", function (req, res) {
+  //   console.log(req.body);
+  //   res.status(200).end();
+
+  // })
+  
+
+
+
+    // var options = {
+    //   method: 'GET',
+    //   url: 'https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/' + offense + '/offense/states/' + statesObj[state][0] + '/COUNT?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv',
+    // };
+
+    // try {
+    //   const response = await axios.request(options)
+    //   model.crimes = response.data.results
+
+    //   console.log(model)
+
+    //   res.render("index", model);
+
+    // } catch (error) {
+    //   console.log(error);
+    // }
+
 
   // cms route loads cms.html
-  app.get("/??", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/???.html"));
-  });
+//   app.get("/??", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../public/???.html"));
+//   });
 
-  // blog route loads blog.html
-  app.get("/??", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/???.html"));
-  });
+//   // blog route loads blog.html
+//   app.get("/??", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../public/???.html"));
+//   });
 
-  // authors route loads author-manager.html
-  app.get("/??", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/???.html"));
-  });
+//   // authors route loads author-manager.html
+//   app.get("/??", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../public/???.html"));
+//   });
 
 };

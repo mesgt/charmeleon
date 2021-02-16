@@ -17,7 +17,6 @@
 
 // ************* GOOGLE MAP AND DATA *********************************
 const crimeCategorySelect = $("#category");
-const crimeSearchBtn = $("#search-btn");
 const userGuideContainer = $("#user-guide-container");
 const chartCont = $("#chartContainer");
 const stateDisplay = $("#state");
@@ -34,14 +33,6 @@ let map;
 let chartContText = $("<p>");
 chartContText.text("Crime trend chart will be displayed here");
 chartCont.append(chartContText);
-
-crimeSearchBtn.on("click", function() {
-  offense = crimeCategorySelect.val();
-  offenseDisplay = $("#" + offense).text();
-  userGuideContainer.empty();
-  const userGuideText = $("<p>").text("Click on the map!");
-  userGuideContainer.append(userGuideText);
-})
 
 const statesObj = { 
   'Alabama': ['AL', '01'],
@@ -100,6 +91,7 @@ const statesObj = {
 $(document).ready(initMap)
 
 function initMap() {
+
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 39.8283, lng: -98.5795 },
     zoom: 4,
@@ -133,6 +125,14 @@ function initMap() {
   });
 
   map.data.addListener('click', function(event) {
+
+    offense = crimeCategorySelect.val();
+    console.log(offense);
+    offenseDisplay = $("#" + offense).text();
+    userGuideContainer.empty();
+    const userGuideText = $("<p>").text("Click on the map!");
+    userGuideContainer.append(userGuideText);
+
     let state = event.feature.getProperty('NAME');
     let stateAbb = statesObj[state][0];
     let stateNum = statesObj[state][1];
