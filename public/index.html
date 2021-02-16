@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,64 +9,29 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 	<link rel="stylesheet" href="./css/overwrite.css">
 	<link rel="stylesheet" href="./css/styles.css">
-	<!-- <link rel="stylesheet" type="text/html" href=".\public\css\styles.css"> -->
 </head>
-
 <body>
-	<!-- <section class="section"> -->
 	<header>
-		<!-- <div class="container"> -->
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				<a href="#">
 					<img src="image.png" alt="See something say something img" width="50">
 				</a>
-				<!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-							data-target="navbarBasicExample">
-							<span aria-hidden="true"></span>
-							<span aria-hidden="true"></span>
-							<span aria-hidden="true"></span>
-						</a> -->
 			</div>
-
 			<div id="navbarBasicExample" class="navbar-menu">
 				<div class="navbar-start">
 					<a href="index.html" class="navbar-item">
 						Home
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
-						<a class="navbar-link">
-							More
-						</a>
-
-						<div class="navbar-dropdown">
-							<a href="about.html" class="navbar-item">
-								About
-							</a>
-							<a href= "contact.html" class="navbar-item">
-								Contact
-							</a>
-							<!-- <hr class="navbar-divider"> -->
-							<a href="index.html" class="navbar-item">
-								Report a crime
-							</a>
-						</div>
 					</div>
 				</div>
 			</div>
-
 			<h1 class="title">
 				See Something - Say Something:
 			</h1>
-
-			<!-- <div class="navbar-end">
-							<div class="navbar-item">
-							</div>
-						</div> -->
-			<!-- </div> -->
 		</nav>
 	</header>
-	<!-- </section> -->
 	<br>
 	<div class="row">
 		<div class="col-md-4">
@@ -76,7 +40,6 @@
 			<br>
 			<div class="container1">
 				<h2>Report a crime: </h2>
-
 				<div class="form-group">
 					<select class="custom-select" id="category">
 						<option selected value="">Choose a crime</option>
@@ -97,58 +60,24 @@
 						<option id="other-crimes-against-persons" value="other-crimes-against-persons">Other Crimes
 							Against Persons</option>
 						<option id="all-other-crimes" value="all-other-crimes">All Other Crimes</option>
-
 					</select>
 					<hr>
-					<!-- <h2>User Input: </h2> -->
 					<ul>
 						<form action="/action_page.php">
 							<label for="username">User Input:</label>
 							<input type="text" id="username" name="username" placeholder="Location" required>
 							<input type="text" id="username" name="username" placeholder="Date" required>
 							<input type="text" id="username" name="username" placeholder="Description" required>
-							<!-- <form name="" method="" action=""><input type="file"></form> -->
+							<br>
 							<input type="submit">
 						</form>
-						<!-- <li><input placeholder="Location"></li>
-						<li><input placeholder="Date"></li>
-						<li><input placeholder="Description"></li> -->
-						<li><form name="" method="" action=""><input type="file"></form></li>
-						<!-- <li><button type="submit">Submit</button></li> -->
+							<br>
+							<li><form name="" method="" action=""><input type="file"></form></li>
 					</ul>
 				</div>
 			</div>
 			</div>
 			<br>
-					<h2>User Input: </h2>
-					<ul>
-						<li><input placeholder="Location"></li>
-						<li><input placeholder="Date"></li>
-						<li><input placeholder="Description"></li>
-						<li><button id="attach">Attach File</button></li>
-					</ul>
-				</div>
-			</div>
-			<br>
-			<div class="col-md-8">
-				<div class="container2">
-				</div>
-				<br>
-				<div class="container3">
-				</div>
-				<br>
-				<div class="container3">
-				<hr>
-				<h2>User Input: </h2>
-				<ul>
-					<li><input placeholder="Location"></li>
-					<li><input placeholder="Date"></li>
-					<li><input placeholder="Description"></li>
-					<li><button id="attach1">Attach File</button></li>
-				</ul>
-			</div>
-		</div>
-		<br>
 		<div class="col-md-8">
 			<div class="map-header-container">
 				<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
@@ -199,8 +128,6 @@
 				</div>
 			</div>
 			<br>
-			<div class="container3">
-				</div>
 			</div>
 		</div>
 	</div>
