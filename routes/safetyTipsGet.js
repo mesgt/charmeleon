@@ -1,13 +1,19 @@
 var db = require("../models");
 
 module.exports = function(app) {
-    app.get("/api/safetyNote", function(req, res) {
-        db.safetyTips.findOne({
+    app.get("/api/safetyNote/:id", function(req, res) {
+        // id = Math.floor(Math.random() * safetyNote.length)
+        // id = 1
+        db.Tips.findOne({
             where: {
                 id: req.params.id
-            } //setup RNG to grab a random tip? Look up findone
+            } 
         }).then(function(dbpost) {
             res.json(dbpost)
         })
     })
 }
+
+//get all
+//randomize
+//select
