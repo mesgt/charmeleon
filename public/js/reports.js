@@ -25,11 +25,11 @@ $(document).ready(function() {
         if (!userData.category || !userData.date || !userData.streetAddress || !userData.city || !userData.state || !userData.zip || !userData.description) {
             return;
         }
-        // If we have a description, run the reportCrime function
+        //  run the reportCrime function
         reportCrime(userData.category, userData.date, userData.streetAddress, userData.city, userData.state, userData.zip, userData.description);
         categoryInput.val("");
         dateInput.val("");
-        streetAddressInput.val("");
+        streetInput.val("");
         cityInput.val("");
         stateInput.val("");
         zipInput.val("");
@@ -40,19 +40,22 @@ $(document).ready(function() {
     // Does a post to the report route.
     function reportCrime(category, date, streetAddress, city, state, zip, description) {
         $.post("/api/userReport", {
-            category: category,
-            date: date,
-            streetAddress: streetAddress,
-            city: city,
-            state: state,
-            zip: zip,
-            description: description,
-        }).catch(handleErr);
-        // If there's an error, handle it
+                category: category,
+                date: date,
+                streetAddress: streetAddress,
+                city: city,
+                state: state,
+                zip: zip,
+                description: description,
+            }).then(function(data) {
+                console.log(data);
+            })
+            // .catch(handleErr);
+            // If there's an error, handle it
     }
 
-    function handleErr(err) {
-        $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
-    }
+    // function handleErr(err) {
+    //     $("#alert .msg").text(err.responseJSON);
+    //     $("#alert").fadeIn(500);
+    // }
 });
