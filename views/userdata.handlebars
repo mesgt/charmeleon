@@ -48,17 +48,15 @@
 					</select>
 					<hr>
 					<ul>
-						<form id="crime-input" action="/action_page.php">
-                            <label for="username">User Input:</label>
-                            <input type="text" id="date" name="username" placeholder="Date" required>
-                            <input type="text" id="street" name="username" placeholder="Street" required>
-                            <input type="text" id="city" name="username" placeholder="City" required>
-                            <input type="text" id="state" name="username" placeholder="State" required>
-                            <input type="text" id="zip" name="username" placeholder="Zip" required>
-                            <input type="text" id="description" name="username" placeholder="Description" required>
-                            <br>
-                            <input type="submit">
-                        </form>							<br>
+						<form id="form.report" action="/">
+							<label for="username">User Input:</label>
+							<input type="text" id="location" name="location" placeholder="Location" required>
+							<input type="text" id="date" name="date" placeholder="Date" required>
+							<input type="text" id="description" name="description" placeholder="Description" required>
+							<br>
+							<input type="submit">
+						</form>
+							<br>
 							<li><form name="" method="" action=""><input type="file"></form></li>
 					</ul>
 			</div>
@@ -91,9 +89,9 @@
 		<div id="user-guide-container"></div>
 		<br>
 		<!-- Map container -->
-		<div class="container2">
+		{{!-- <div class="container2">
 			<div id="map"></div>
-		</div>
+		</div> --}}
 		<br>
 		<!-- Graph and data container -->
 		<div class="data-container">
