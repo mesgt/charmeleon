@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+// const { config } = require('dotenv/types')
+require('dotenv').config();
+
+>>>>>>> f3814e5f99db601dbe8b5d7885430fda37708993
 
 require('dotenv').config();
 module.exports = {
@@ -18,11 +25,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "port": 3306,
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
