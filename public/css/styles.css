@@ -32,16 +32,27 @@ input{
     margin-right: auto; */
 }
 
-.container1 button {
+/* .container1 button {
     width: 100px;
     margin-top: 4px;
     margin-left: 4px;
-}
+} */
 
 .navbar {
     background-color: #4472C4;
 }
 
+.date {
+    border-style: solid;
+    border-width: 1px;
+    height: 700px;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #7F7F7F; 
+}
 .container1 {
     border-style: solid;
     border-width: 1px;
@@ -90,12 +101,6 @@ input{
     background-color: #A5A5A5;
 }
 
-.container1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
 hr {
     width: 90%;
