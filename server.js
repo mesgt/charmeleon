@@ -23,10 +23,11 @@ require("./routes/googleMap-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/post-api-routes.js")(app);
 require("./routes/safetyTipsGet.js")(app);
+require("./routes/localReports.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
