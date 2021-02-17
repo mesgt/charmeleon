@@ -18,7 +18,7 @@ function initMap() {
   function displayData () {
     crime = crimeCategorySelect.val();
     dynamicContainer.empty();
-    const userGuideText = $("<p>").text("Viewing local data for " + crime + " 1/1/2020 to 2/14/2020");
+    const userGuideText = $("<p>").text("Viewing local data for " + crime + " from 1/1/2021 to 1/14/2021");
     dynamicContainer.append(userGuideText);
 
     $.ajax("/local/" + crime, {
