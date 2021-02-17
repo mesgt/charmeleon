@@ -1,5 +1,4 @@
-// const { config } = require('dotenv/types')
-
+require('dotenv').config();
 module.exports = {
   "development": {
     "username": process.env.DEVELOPMENT_USERNAME,
@@ -18,11 +17,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "port": 3306,
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }

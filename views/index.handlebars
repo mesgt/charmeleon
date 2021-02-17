@@ -2,7 +2,7 @@
 	<nav class="navbar" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
 			<a href="#">
-				<img src="image.png" alt="See something say something img" width="50">
+				<img src="../public/images/image.png" alt="See something say something img" width="50">
 			</a>
 		</div>
 		<div id="navbarBasicExample" class="navbar-menu">
@@ -22,7 +22,8 @@
 	<br>
 	<div class="row">
 		<div class="col-md-4">
-			<input type="text" id="######" placeholder="Zip Code">
+			<p><span class ="date" id="datetime"></span></p><script>var dt = new Date();
+			document.getElementById("datetime").innerHTML=dt.toLocaleString();</script> 
 			<br>
 			<br>
 			<div class="container1">
@@ -58,8 +59,9 @@
                             <input type="text" id="description" name="username" placeholder="Description" required>
                             <br>
                             <input type="submit">
-                        </form>							<br>
-							<li><form name="" method="" action=""><input type="file"></form></li>
+                        </form>							
+						<br>
+						<li><form name="" method="" action=""><input type="file"></form></li>
 					</ul>
 			</div>
 		</div>
@@ -122,6 +124,6 @@
 </div>
 <footer>
 </footer>
-
+<!-- Text -->
 <script src="./js/crimeAdePage.js"></script>
 <script src="./js/reports.js"></script>
