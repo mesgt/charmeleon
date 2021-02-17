@@ -53,18 +53,45 @@ const statesObj = {
   'Wisconsin': ['WI', '55'],
   'Wyoming': ['WY', '56'],
 };
+// const mysql = require("mysql");
+
+// var connection = mysql.createConnection({
+//   host: "localhost",
+
+//   // Your port; if not 3306
+//   port: 3306,
+
+//   // Your username
+//   user: "root",
+
+//   // Your password
+//   password: "root",
+//   database: "crimeAde"
+// });
+
 
 module.exports = function(app) {
 
-  app.get("/api/:crime", function (req, res) {
+  app.get("/test", function (req, res) {
+    // db.
     db.CrimeDenver.findAll({
       // attributes: ['geo_lat', 'geo_lon'],
-      // where: {
-      //   offense_category_id: req.params.crime
-      // }
+      where: {
+        id: 1
+      }
     }).then(function(data) {
       console.log(data);
     })
+    // connection.connect(function(err) {
+    //   if (err) throw err;
+    //   console.log("connected as id " + connection.threadId);
+    //   const queryUrl = "select geo_lat, geo_lon from crimeDenver where offense_category_id = 'white-collar-crime'";
+    //   connection.query(queryUrl, function(err, data) {
+    //     if (err) throw err;
+    //     console.table(res);
+    //     connection.end();
+    // });
+    // });
   })
 
   app.get("/api/:offense/:state", function (req, res) {
