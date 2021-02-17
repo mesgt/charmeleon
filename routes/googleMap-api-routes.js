@@ -56,6 +56,17 @@ const statesObj = {
 
 module.exports = function(app) {
 
+  app.get("/api/:crime", function (req, res) {
+    db.CrimeDenver.findAll({
+      // attributes: ['geo_lat', 'geo_lon'],
+      // where: {
+      //   offense_category_id: req.params.crime
+      // }
+    }).then(function(data) {
+      console.log(data);
+    })
+  })
+
   app.get("/api/:offense/:state", function (req, res) {
     
     let state = req.params.state;

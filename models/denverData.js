@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var crimeDenver = sequelize.define("crimeDenver", {
+    var CrimeDenver = sequelize.define("CrimeDenver", {
             offense_type_id: { 
                 type: DataTypes.TEXT,
                 allowNull: true,
@@ -36,5 +36,5 @@ module.exports = function(sequelize, DataTypes) {
 
     );
 
-    return crimeDenver;
+    return CrimeDenver;
 };
