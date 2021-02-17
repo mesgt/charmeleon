@@ -38,10 +38,6 @@ input{
     margin-left: 4px;
 }
 
-/* nav.navbar {
-    width: 400px;
-} */
-
 .navbar {
     background-color: #4472C4;
 }
@@ -105,7 +101,7 @@ h1.title {
     background-color: #4472C4;
 }
 
-/* ********* Google map, google map header, and chart style ************ */
+/* ********* Google map, google map header, and chart style HOME PAGE ************ */
 .map-header-container,
 .data-container {
     border-style: solid;
@@ -168,9 +164,22 @@ h1.title {
     padding-right: 7px;
     padding-left: 7px;
 }
-/* .graph-col {
 
-} */
+/* LOCAL MAP STYLES */
+
+.container5 {
+    border-style: solid;
+    border-width: 1px;
+    height: 81%;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100% - 5px;
+    background-color: #A5A5A5;
+}
+
+
 
 @media screen and (max-width: 600px) {
 

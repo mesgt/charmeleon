@@ -1,4 +1,4 @@
-	<header>
+<header>
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				<a href="#">
@@ -7,8 +7,8 @@
 			</div>
 			<div id="navbarBasicExample" class="navbar-menu">
 				<div class="navbar-start">
-					<a href="/localdata" class="navbar-item">
-						View Local Data
+					<a href="/" class="navbar-item">
+						Home
 					</a>
 					<div class="navbar-item has-dropdown is-hoverable">
 					</div>
@@ -65,33 +65,33 @@
 			<br>
 		<div class="col-md-8">
 			<div class="map-header-container">
-				<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
+				<p class="map-form-header"><em>Choose a crime</em></p>
 				<div class="form-group">
 					<select class="custom-select" id="category">
-					  <option selected value="">Choose a crime</option>
-					  <option id="aggravated-assault" value="aggravated-assault">Aggravated assault</option>
-					  <option id="shoplifting" value="shoplifting">Shoplifting</option>
-					  <option id="burglary-breaking-and-entering" value="burglary-breaking-and-entering">Burglary</option>
-					  <option id="hacking-computer-invasion" value="hacking-computer-invasion">Hacking/computer invasion</option>
-					  <option id="arson" value="arson">Arson</option>
-					  <option id="kidnapping-abduction" value="kidnapping-abduction">Kidnapping/abduction</option>
-					  <option id="murder-and-nonnegligent-manslaughter" value="murder-and-nonnegligent-manslaughter">Murder</option>
-					  <option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
-					  <option id="rape" value="rape">Rape</option>
-					  <option id="destruction-damage-vandalism-of-property" value="destruction-damage-vandalism-of-property">Property Damage</option>
+					  <option selected value="">Select a crime to view stats</option>
+					  <option value="aggravated-assault">aggravated assault</option>
+					  <option value="all-other-crimes">all other crimes</option>
+					  <option value="auto-theft">auto theft</option>
+					  <option value="burglary">burglary</option>
+					  <option value="drug-alcohol">drug alcohol</option>
+					  <option value="larceny">larceny</option>
+					  <option value="other-crimes-against-persons">other crimes against persons</option>
+					  <option value="public-disorder">public disorder</option>
+					  <option value="robbery">robbery</option>
+					  <option value="theft-from-motor-vehicle">theft from motor vehicle</option>
+                      <option value="traffic-accident">traffic accident</option>
+                      <option value="white-collar-crime">white collar crime</option>
 					</select>
+                    <button type="submit">Search</button>
 				</div>
-			</div>
-			<!-- Tells user to click the map when a crime is searched -->
-			<div id="user-guide-container"></div>
-			<br>
+			</div> <br>
 			<!-- Map container -->
-			<div class="container2">
+			<div class="container5">
 				<div id="map"></div>
 			</div>
 			<br>
 			<!-- Graph and data container -->
-			<div class="data-container">
+			{{!-- <div class="data-container">
 				<div class="row">
 					<div class="col-md-4 data-col">
 						<div class="data-box">
@@ -110,13 +110,11 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 			<br>
-			</div>
 		</div>
 	</div>
 	<footer>
 	</footer>
 
-<script src="./js/crimeAdePage.js"></script>
-<script src="./js/reports.js"></script>
+    <script src="./js/localMapData.js"></script>
