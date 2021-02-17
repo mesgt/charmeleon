@@ -5,15 +5,16 @@ module.exports = function(app) {
     // POST route for saving a new report
     app.post("/api/userReport", function(req, res) {
         db.Report.create({
-            category: req.body.category, //drop down input??
+            category: req.body.category,
+            date: req.body.date,
             streetAddress: req.body.streetAddress,
             city: req.body.city,
             state: req.body.state,
             zip: req.body.zip,
-            date: req.body.date,
             description: req.body.description
                 // attachments: lookup imgur npm
         }).then(function(dbpost) {
+            // res.redirect("views/userdata.handlebars");
             res.json(dbpost);
         })
     });
@@ -21,7 +22,7 @@ module.exports = function(app) {
     // GET routes for user reported data
     app.get("/api/userReport", function(req, res) {
         db.Report.findAll({}).then(function(dbPost) {
-            console.log(Report);
+            // console.log(Report);
             res.json(dbPost);
         });
 

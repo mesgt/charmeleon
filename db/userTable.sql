@@ -10,3 +10,5 @@ CREATE TABLE userReport
     description VARCHAR(255),
 	PRIMARY KEY (id)
 );
+
+select * from userReport
