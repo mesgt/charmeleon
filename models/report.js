@@ -5,27 +5,27 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: false,
                 len: [1]
             },
-            streetAddress: { 
+            streetAddress: {
                 type: DataTypes.TEXT,
                 allowNull: false,
                 len: [1]
             },
-            city: { 
+            city: {
                 type: DataTypes.TEXT,
                 allowNull: false,
                 len: [1]
             },
-            state: { 
+            state: {
                 type: DataTypes.TEXT,
                 allowNull: false,
                 len: [1]
             },
-            zip: { 
+            zip: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 len: [1]
             },
-            date: { 
+            date:{
                 type: DataTypes.DATEONLY,
                 allowNull: false,
                 len: [1]
