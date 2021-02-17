@@ -6,11 +6,11 @@ module.exports = function(app) {
     app.post("/api/userReport", function(req, res) {
         db.Report.create({
             category: req.body.category, //drop down input??
+            date: req.body.date,
             streetAddress: req.body.streetAddress,
             city: req.body.city,
             state: req.body.state,
             zip: req.body.zip,
-            date: req.body.date,
             description: req.body.description
                 // attachments: lookup imgur npm
         }).then(function(dbpost) {
