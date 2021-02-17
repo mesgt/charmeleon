@@ -90,6 +90,13 @@ input{
     background-color: #A5A5A5;
 }
 
+.container1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 hr {
     width: 90%;
     margin-left: auto;
