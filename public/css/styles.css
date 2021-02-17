@@ -98,6 +98,8 @@ hr {
 
 h1.title {
     margin: none;
+    padding-top: 15px;
+    padding-right: 750px;
     background-color: #4472C4;
 }
 
