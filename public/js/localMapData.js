@@ -1,4 +1,17 @@
+const crimeSearchBtn = $("#crime-search-btn");
+const crimeCategorySelect = $("#category");
+const dynamicContainer = $("#dynamic-container");
+
+
 $(document).ready(initMap)
+
+crimeSearchBtn.on("click", function() {
+  crime = crimeCategorySelect.val();
+  console.log(crime);
+  dynamicContainer.empty();
+  const userGuideText = $("<p>").text("Viewing local data for " + crime);
+  dynamicContainer.append(userGuideText);
+})
 
 function initMap() {
 

@@ -67,10 +67,9 @@
 	<br>
 	<div class="col-md-8">
 		<div class="map-header-container">
-			<p class="map-form-header"><em>Choose a crime</em></p>
 			<div class="form-group">
 				<select class="custom-select" id="category">
-					<option selected value="">Select a crime to view stats</option>
+					<option selected value="">Select a crime</option>
 					<option value="aggravated-assault">aggravated assault</option>
 					<option value="all-other-crimes">all other crimes</option>
 					<option value="auto-theft">auto theft</option>
@@ -84,35 +83,25 @@
 					<option value="traffic-accident">traffic accident</option>
 					<option value="white-collar-crime">white collar crime</option>
 				</select>
-				<button type="submit">Search</button>
+				<button id="crime-search-btn" type="submit">Search</button>
 			</div>
 		</div> <br>
+		<div id="dynamic-container"></div>
 		<!-- Map container -->
 		<div class="container5">
 			<div id="map"></div>
 		</div>
 		<br>
 		<!-- Graph and data container -->
-		{{!-- <div class="data-container">
-			<div class="row">
-				<div class="col-md-4 data-col">
-					<div class="data-box">
-						<h4 class="crime-rate-header">2019 Crime Rates</h4>
-						<h5 id="state"></h5>
-						<p id="crime"></p>
-						<div class="rate-color">
-							<p id="rate"></p>
-						</div>
-						<p id="people"></p>
+		<div class="data-container">
+			{{!-- <div class="row">
+				<div class="col-md-12 safety-tips-col">
+					<div class="safety-tips-box">
+						
 					</div>
 				</div>
-				<div class="col-md-8 graph-col">
-					<div class="graph-box">
-						<div id="chartContainer" style="height: 15rem; width: 100%;"></div>
-					</div>
-				</div>
-			</div>
-		</div> --}}
+			</div> --}}
+		</div>
 		<br>
 	</div>
 </div>
