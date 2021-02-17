@@ -12,4 +12,3 @@ module.exports = function(sequelize, DataTypes) {
 
         return Tips;
     }
-    // We might not need this file actually
