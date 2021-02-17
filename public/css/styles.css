@@ -90,12 +90,37 @@ input{
     background-color: #A5A5A5;
 }
 
-.container1 {
+.container5 {
+    border-style: solid;
+    border-width: 1px;
+    height: 700px;
+    padding: 1px 2px;
+    border-radius: 2px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    padding: 5em 2em;
+    width: 100% - 5px;
+    background-color: #7F7F7F;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.col-md-8 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 50%;
+    /* float: right; */
+}
+
+/* .container1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-}
+} */
 
 hr {
     width: 90%;
@@ -108,6 +133,11 @@ h1.title {
     padding-top: 15px;
     padding-right: 750px;
     background-color: #4472C4;
+}
+
+textarea {
+    width: 80%;
+    margin-left: 4px;
 }
 
 /* ********* Google map, google map header, and chart style HOME PAGE ************ */
