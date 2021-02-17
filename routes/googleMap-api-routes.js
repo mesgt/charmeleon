@@ -1,5 +1,6 @@
 const db = require("../models");
-const axios = require("axios")
+const axios = require("axios");
+const { Op } = require("sequelize");
 const statesObj = {
   'Alabama': ['AL', '01'],
   'Alaska': ['AK', '02'],
@@ -72,27 +73,7 @@ const statesObj = {
 
 module.exports = function(app) {
 
-  app.get("/test", function (req, res) {
-    // db.
-    db.CrimeDenver.findAll({
-      // attributes: ['geo_lat', 'geo_lon'],
-      where: {
-        id: 1
-      }
-    }).then(function(data) {
-      console.log(data);
-    })
-    // connection.connect(function(err) {
-    //   if (err) throw err;
-    //   console.log("connected as id " + connection.threadId);
-    //   const queryUrl = "select geo_lat, geo_lon from crimeDenver where offense_category_id = 'white-collar-crime'";
-    //   connection.query(queryUrl, function(err, data) {
-    //     if (err) throw err;
-    //     console.table(res);
-    //     connection.end();
-    // });
-    // });
-  })
+
 
   app.get("/api/:offense/:state", function (req, res) {
     
@@ -169,6 +150,27 @@ module.exports = function(app) {
       }
 
     })();
+  })
+
+//   select geo_lat, geo_lon, first_occurrence_date 
+// from crimeDenvers
+// where (first_occurrence_date between '2020-01-01 07:25:00' and '2021-01-14 03:14:00') and (offense_category_id = 'white-collar-crime');
+
+  app.get("/local/:crime", function (req, res) {
+    db.CrimeDenver.findAll({
+      attributes: ['geo_lat', 'geo_lon', 'offense_type_id'],
+      where: {
+        [Op.and]: [
+          { offense_category_id: req.params.crime },
+          { first_occurrence_date: {
+              [Op.between]: ['2021-01-01 00:05:00', '2021-01-14 03:14:00']
+            } 
+          }
+        ]
+      }
+    }).then(function(data) {
+      res.json(data);
+    })
   })
 
 };
