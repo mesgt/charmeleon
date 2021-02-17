@@ -192,7 +192,7 @@ h1.title {
 
 @media screen and (max-width: 600px) {
 
-    /* google map */
+    /* google map *
     #map {
         height: 25rem;
     }
