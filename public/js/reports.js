@@ -1,20 +1,39 @@
 $(document).ready(function() {
-    var reportForm = $("form.report"); //still need to make in Handlebars
-    var crimeInput = $("input#crime-input") //still need to make in Handlebars
+    var reportForm = $("form.report");
+    var categoryInput = $("select#sidebar-category");
+    var dateInput = $("input#date-input");
+    var streetInput = $("input#street-input");
+    var cityInput = $("input#city-input");
+    var stateInput = $("input#state-input");
+    var zipInput = $("input#zip-input");
+    var descriptionInput = $("input#description-input");
 
     reportForm.on("submit", function(event) {
         event.preventDefault();
+        console.log(event);
         var userData = {
-            description: crimeInput.val().trim(),
+            category: categoryInput.val(),
+            date: dateInput.val().trim(),
+            streetAddress: streetInput.val().trim(),
+            city: cityInput.val().trim(),
+            state: stateInput.val().trim(),
+            zip: zipInput.val().trim(),
+            description: descriptionInput.val().trim(),
 
         };
 
-        if (!userData.description) {
+        if (!userData.category || !userData.date || !userData.streetAddress || !userData.city || !userData.state || !userData.zip || !userData.description) {
             return;
         }
         // If we have a description, run the reportCrime function
-        reportCrime(userData.description);
-        crimeInput.val("");
+        reportCrime(userData.category, userData.date, userData.streetAddress, userData.city, userData.state, userData.zip, userData.description);
+        categoryInput.val("");
+        dateInput.val("");
+        streetAddressInput.val("");
+        cityInput.val("");
+        stateInput.val("");
+        zipInput.val("");
+        descriptionInput.val("");
 
     });
 

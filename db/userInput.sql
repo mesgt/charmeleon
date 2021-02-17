@@ -18,3 +18,6 @@ INSERT into userReport (category, date, streetAddress, city, state, zip, descrip
 INSERT into userReport (category, date, streetAddress, city, state, zip, description) VALUES ("robbery", "2021-02-10", "1065 S QUIVAS ST", "Denver", "Colorado", "80223", "I was using an atm and some kid just grabbed my purse.");
 INSERT into userReport (category, date, streetAddress, city, state, zip, description) VALUES ("theft from motor vehicle", "2021-02-10", "1600 BLK S UNIVERSITY BLVD", "Denver", "Colorado", "80210", "I woke up to my car alarm going off. I chased the kid off, but I thought I'd report it here anyway.");
 INSERT into userReport (category, date, streetAddress, city, state, zip, description) VALUES ("burglary", "2021-02-10", "N CENTRAL PARK BLVD / E 47TH AVE", "Denver", "Colorado", "80238", "Our business was robbed. Someone broke in and stole all the computers, printers and fax machines.");
+
+
+select * from userReport

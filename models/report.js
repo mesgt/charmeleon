@@ -5,6 +5,11 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: false,
                 len: [1]
             },
+            date: {
+                type: DataTypes.DATEONLY,
+                allowNull: false,
+                len: [1]
+            },
             streetAddress: {
                 type: DataTypes.TEXT,
                 allowNull: false,
@@ -22,11 +27,6 @@ module.exports = function(sequelize, DataTypes) {
             },
             zip: {
                 type: DataTypes.INTEGER,
-                allowNull: false,
-                len: [1]
-            },
-            date:{
-                type: DataTypes.DATEONLY,
                 allowNull: false,
                 len: [1]
             },
