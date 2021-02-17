@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-
-// const { config } = require('dotenv/types')
-require('dotenv').config();
-
->>>>>>> f3814e5f99db601dbe8b5d7885430fda37708993
-
 require('dotenv').config();
 module.exports = {
   "development": {
