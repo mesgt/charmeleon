@@ -22,12 +22,14 @@
 	<br>
 	<div class="row">
 		<div class="col-md-4">
+			<input type="text" placeholder="Zip Code">
 			<p><span class ="date" id="datetime"></span></p><script>var dt = new Date();
 			document.getElementById("datetime").innerHTML=dt.toLocaleString();</script> 
 			<br>
 			<br>
 			<div class="container1">
 				<h2>Report a crime: </h2>
+				<br>
 				<div class="form-group">
 					<select class="custom-select" id="sidebar-category">
 						<option selected value="">Choose a crime</option>
@@ -56,11 +58,11 @@
                             <input type="text" id="city" name="username" placeholder="City" required>
                             <input type="text" id="state" name="username" placeholder="State" required>
                             <input type="text" id="zip" name="username" placeholder="Zip" required>
-                            <input type="text" id="description" name="username" placeholder="Description" required>
+							<textarea type="text" id="description" name="username" placeholder="Description" required></textarea>
                             <br>
                             <input type="submit">
-                        </form>							
-						<br>
+                        </form>			
+						                <br>
 						<li><form name="" method="" action=""><input type="file"></form></li>
 					</ul>
 			</div>
