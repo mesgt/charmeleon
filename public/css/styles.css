@@ -4,33 +4,37 @@ body {
     color: black;
     box-sizing: border-box;
 }
-
 .container {
     background-color: #4472C4;
 }
-
 header {
     background-color: #4472C4;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
-
 input{
     resize: horizontal;
+    /* width: 200px; */
+    width: none;
     width: 100%;
     min-width: 200px;
     margin-left: 5px;
     /* margin-right: 5px; */
     background-color: #A5A5A5;
 }
-
 .container1 input {
     width: 90%;
-
+    /* margin-left: auto;
+    margin-right: auto; */
 }
-
+/* .container1 button {
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 4px;
+} */
 .navbar {
     background-color: #4472C4;
 }
-
 .date {
     border-style: solid;
     border-width: 1px;
@@ -53,7 +57,6 @@ input{
     width: 100% - 5px;
     background-color: #7F7F7F;
 }
-
 .container2 {
     border-style: solid;
     border-width: 1px;
@@ -65,7 +68,6 @@ input{
     width: 100% - 5px;
     background-color: #A5A5A5;
 }
-
 .container3 {
     border-style: solid;
     border-width: 1px;
@@ -77,7 +79,6 @@ input{
     width: 100% - 5px;
     background-color: #4472C4;
 }
-
 .container4 {
     border-style: solid;
     border-width: 1px;
@@ -89,53 +90,17 @@ input{
     width: 100% - 5px;
     background-color: #A5A5A5;
 }
-
-.container6 {
-    border-style: solid;
-    border-width: 1px;
-    height: 700px;
-    padding: 1px 2px;
-    border-radius: 2px;
-    padding: 5em 2em;
-    width: 100% - 5px;
-    background-color: #A5A5A5;
-    justify-content: flex-end;
-    /* text-align: center; */
-}
-
-.container6 input {
-    width: 50%;
-}
-
-.col-md-4 p {
-    text-align: right;
-    margin-bottom: 7px;
-}
-
-.col-md-8 {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 hr {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
-
 h1.title {
     margin: none;
     padding-top: 15px;
     padding-right: 750px;
     background-color: #4472C4;
 }
-
-textarea {
-    width: 90%;
-    margin-left: 4px;
-    height: 20%;
-}
-
 /* ********* Google map, google map header, and chart style HOME PAGE ************ */
 .map-header-container,
 .data-container {
@@ -147,61 +112,49 @@ textarea {
     margin-right: 5px;
     background-color: #2F5597;
 }
-
 .map-form-header {
     color:  #A5A5A5;
     text-align: center;
     margin-bottom: 0.5rem;
 }
-
 .custom-select {
     margin-bottom: 0.5rem;
 }
-
 .map-nav {
     background-color: white;
 }
-
 #user-guide-container {
     text-align: center;
     margin-top: 1rem;
 }
-
 #map {
     height: 100%;
     width: 100%;
 }
-
 #chartContainer {
     color: #A5A5A5;
     text-align: center;
 }
-
 .data-box,
 .graph-box {
     height: 100%;
     background-color: white;
 }
-
 .data-box {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-
 .crime-rate-header {
     font-weight: bolder;
     font-size: 1.4rem;
 }
-
 .rate-color {
     padding-right: 7px;
     padding-left: 7px;
 }
-
 /* LOCAL MAP STYLES */
-
 .container5 {
     border-style: solid;
     border-width: 1px;
@@ -213,27 +166,12 @@ textarea {
     width: 100% - 5px;
     background-color: #A5A5A5;
 }
-
-.container6 input {
-    width: 50%;
-}
-.col-md-4 p {
-    text-align: right;
-    margin-bottom: 7px;
-}
-.col-md-8 {
-    margin-left: auto;
-    margin-right: auto;
-}
-textarea {
-    width: 90%;
-    margin-left: 4px;
-    height: 20%;
-}
-
 @media screen and (max-width: 600px) {
-
-    /* google map *
+    /* google map */
     #map {
         height: 25rem;
     }
+}
+@media screen and (max-width: px) {
+}
+/*text//

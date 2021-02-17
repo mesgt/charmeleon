@@ -1,8 +1,4 @@
-
-// const { config } = require('dotenv/types')
 require('dotenv').config();
-
-
 module.exports = {
   "development": {
     "username": process.env.DEVELOPMENT_USERNAME,
