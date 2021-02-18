@@ -17,23 +17,29 @@ $.ajax("/api/reports", {
 }).then(function(response) {
     response = response.slice(0, 10);
     response.forEach(element => {
-        let newRow = $("<tr>");
-        let newInput = $("<td>");
-        newInput.attr("data-number", element.id);
-        newInput.text(`\xa0 ${element.date} \xa0`);
+      let newRow = $("<tr>");
+      let newInput = $("<td>");
+      newInput.attr("data-number", element.id);
+      newInput.text(`\xa0 ${element.date} \xa0`);
 
-        let newCrime = $("<td>");
-        newCrime.attr("data-number", element.id);
-        newCrime.text(`\xa0 ${element.category} \xa0`);
+      let newCrime = $("<td>");
+      newCrime.attr("data-number", element.id);
+      newCrime.text(`\xa0 ${element.category} \xa0`);
 
-        let button = $("<button>");
-        button.addClass("report-btn");
-        $(`button`).attr(`id`, element.id);
-        button.attr("data-number", element.id);
-        button.text(`\xa0 ${"?"} \xa0`)
+      let button = $("<button>");
+      button.addClass("report-btn");
+      $(`button`).attr(`id`, element.id);
+      button.attr("data-number", element.id);
+      button.text(`\xa0 ${"?"} \xa0`);
+      button.on("click", function() {
+          let id = $(this)
+          console.log(id);
+      location.replace("/userdata")
+      });
 
-        newRow.append(newInput, newCrime, button);
-        $("#userList").append(newRow);
+      newRow.append(newInput, newCrime, button);
+      $("#userList").append(newRow);
+
     })
 
     // $(`#${id}`).on("click", function(event) {
