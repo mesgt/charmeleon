@@ -19,43 +19,39 @@ $(document).ready(function() {
             state: stateInput.val().trim(),
             zip: zipInput.val().trim(),
             description: descriptionInput.val().trim(),
-
         };
 
         if (!userData.category || !userData.date || !userData.streetAddress || !userData.city || !userData.state || !userData.zip || !userData.description) {
             return;
         }
+
+        
+            $.ajax("/api/userReport", {
+                type: "POST",
+                data: userData
+                }).then(function() {
+                    console.log("yes");
+                })
+                // .catch(handleErr);
+                // If there's an error, handle it
+        })
+    
         //  run the reportCrime function
-        reportCrime(userData.category, userData.date, userData.streetAddress, userData.city, userData.state, userData.zip, userData.description);
-        categoryInput.val("");
-        dateInput.val("");
-        streetInput.val("");
-        cityInput.val("");
-        stateInput.val("");
-        zipInput.val("");
-        descriptionInput.val("");
+        // reportCrime(userData.category, userData.date, userData.streetAddress, userData.city, userData.state, userData.zip, userData.description);
+        // categoryInput.val("");
+        // dateInput.val("");
+        // streetInput.val("");
+        // cityInput.val("");
+        // stateInput.val("");
+        // zipInput.val("");
+        // descriptionInput.val("");
 
     });
 
     // Does a post to the report route.
-    function reportCrime(category, date, streetAddress, city, state, zip, description) {
-        $.post("/api/userReport", {
-                category: category,
-                date: date,
-                streetAddress: streetAddress,
-                city: city,
-                state: state,
-                zip: zip,
-                description: description,
-            }).then(function(data) {
-                console.log(data);
-            })
-            // .catch(handleErr);
-            // If there's an error, handle it
-    }
 
     // function handleErr(err) {
     //     $("#alert .msg").text(err.responseJSON);
     //     $("#alert").fadeIn(500);
     // }
-});
+// });

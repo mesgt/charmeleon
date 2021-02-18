@@ -20,13 +20,13 @@ module.exports = function(app) {
     });
 
     // GET routes for user reported data
-    app.get("/api/userReport", function(req, res) {
-        db.Report.findAll({}).then(function(dbPost) {
+    // app.get("/api/userReport", function(req, res) {
+    //     db.Report.findAll({}).then(function(dbPost) {
             // console.log(Report);
-            res.json(dbPost);
-        });
+        //     res.json(dbPost);
+        // });
 
-    });
+    // });
 
     app.get("/api/userReport/:id", function(req, res) {
         db.Report.findOne({
