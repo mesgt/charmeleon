@@ -8,7 +8,8 @@ let map;
 let mapMarkers = [];
 
 $(document).ready(function() {
-  initMap();
+    getSafetyTip();
+    initMap();
 });
 
 $.ajax("/api/reports", {
@@ -16,28 +17,24 @@ $.ajax("/api/reports", {
 }).then(function(response) {
     response = response.slice(0, 10);
     response.forEach(element => {
-      let newRow = $("<tr>");
-      let newInput = $("<td>");
-      newInput.attr("data-number", element.id);
-      newInput.text(`\xa0 ${element.date} \xa0`);
+        let newRow = $("<tr>");
+        let newInput = $("<td>");
+        newInput.attr("data-number", element.id);
+        newInput.text(`\xa0 ${element.date} \xa0`);
 
-      let newCrime = $("<td>");
-      newCrime.attr("data-number", element.id);
-      newCrime.text(`\xa0 ${element.category} \xa0`);
+        let newCrime = $("<td>");
+        newCrime.attr("data-number", element.id);
+        newCrime.text(`\xa0 ${element.category} \xa0`);
 
-      let button = $("<button>");
-      button.addClass("report-btn");
-      $(`button`).attr(`id`, element.id);
-      button.attr("data-number", element.id);
-      button.text(`\xa0 ${"?"} \xa0`)
+        let button = $("<button>");
+        button.addClass("report-btn");
+        $(`button`).attr(`id`, element.id);
+        button.attr("data-number", element.id);
+        button.text(`\xa0 ${"?"} \xa0`)
 
-      newRow.append(newInput, newCrime, button);
-      $("#userList").append(newRow);
+        newRow.append(newInput, newCrime, button);
+        $("#userList").append(newRow);
     })
-        //     $("#safetyTipTitle").text(response.title);
-        //     $("#safetyTipBody").text(response.body);
-        // }).catch(err => (handleErr(err))
-        // );
 
     // $(`#${id}`).on("click", function(event) {
     //     event.preventDefault();
@@ -45,23 +42,15 @@ $.ajax("/api/reports", {
     //     window.location.href = "/userdata/:id";
     // })
 })
-  
-  
 
 //safety tips
 function getSafetyTip() {
-    $.ajax("/api/safetyNote/", {
+    $.ajax("/api/safetytips/", {
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         $("#safetyTipTitle").text(response.title);
         $("#safetyTipBody").text(response.body);
-    }).catch(err => (handleErr(err)));
-};
-
-function handleErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+    })
 };
 
 // google map
@@ -121,4 +110,4 @@ function initMap() {
         setMapOnAll(null);
         mapMarkers = [];
     }
-  }
+}
