@@ -28,7 +28,7 @@ $.ajax("/api/reports", {
       button.addClass("report-btn");
       $(`button`).attr(`id`, element.id);
       button.attr("data-number", element.id);
-      button.text(`\xa0 ${"?"} \xa0`);
+      button.text(`\xa0 ${"info"} \xa0`);
       button.on("click", function() {
         let id = $(this).attr("data-number");
         var url = "/userdata/" + id;

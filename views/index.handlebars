@@ -18,106 +18,104 @@
 	</header>
 	<br>
 	<div class="row">
-		<div class="col-md-4">
-			<p><span class ="date" id="datetime"></span></p><script>var dt = new Date();
-			document.getElementById("datetime").innerHTML=dt.toLocaleString();</script> 
-			<br>
-			<br>
+		<div class="col-md-4 aside-col">
 			<div class="container1">
-				<h2>Report a crime: </h2>
+				<p><span class ="date" id="datetime"></span></p><script>var dt = new Date();
+				document.getElementById("datetime").innerHTML=dt.toLocaleString();</script> 
+				<br>
+					<h2 class="report-a-crime">Report a crime: </h2>
+					<div class="form-group">
+						<select class="custom-select" id="sidebar-category">
+							<option selected value="">Choose a crime</option>
+							<option value="aggravated-assault">Aggrevated Assault</option>
+							<option value="arson">Arson</option>
+							<option value="burglary">Burglary</option>
+							<option value="auto-theft">Auto Theft</option>
+							<option value="drug-alcohol">Drug or Alcohol</option>
+							<option value="larceny">Larceny</option>
+							<option value="murder">Murder</option>
+							<option value="theft-from-motor-vehicle">Theft from Motor Vehicle</option>
+							<option value="sexual-assault">Sexual Assault</option>
+							<option value="public-disorder">Public Disorder</option>
+							<option value="robbery">Robbery</option>
+							<option value="traffic-accident">Traffic Accident</option>
+							<option value="white-collar-crime">White Collar Crime</option>
+							<option value="other-crimes-against-persons">Other Crimes Against Persons</option>
+							<option value="all-other-crimes">All Other Crimes</option>
+						</select>
+						<hr>
+						<ul>
+							<form id="crime-input" class="report">
+								<label for="username">User Input:</label>
+								<input type="text" id="date-input" name="username" placeholder="Date" required>
+								<input type="text" id="street-input" name="username" placeholder="Street" required>
+								<input type="text" id="city-input" name="username" placeholder="City" required>
+								<input type="text" id="state-input" name="username" placeholder="State" required>
+								<input type="text" id="zip-input" name="username" placeholder="Zip" required>
+								<input type="text" id="description-input" name="username" placeholder="Description" required>
+								<br>
+								<input type="submit">
+								<button type="submit">Submit</button>
+							</form>							
+							<br>
+							<li><form name="" method="" action=""><input type="file"></form></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+		<div class="col-md-8">
+			<div class="map-header-container">
+				<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
 				<div class="form-group">
-					<select class="custom-select" id="sidebar-category">
+					<select class="custom-select" id="category">
 						<option selected value="">Choose a crime</option>
-						<option value="aggravated-assault">Aggrevated Assault</option>
-						<option value="arson">Arson</option>
-						<option value="burglary">Burglary</option>
-						<option value="auto-theft">Auto Theft</option>
-						<option value="drug-alcohol">Drug or Alcohol</option>
-						<option value="larceny">Larceny</option>
-						<option value="murder">Murder</option>
-						<option value="theft-from-motor-vehicle">Theft from Motor Vehicle</option>
-						<option value="sexual-assault">Sexual Assault</option>
-						<option value="public-disorder">Public Disorder</option>
-						<option value="robbery">Robbery</option>
-						<option value="traffic-accident">Traffic Accident</option>
-						<option value="white-collar-crime">White Collar Crime</option>
-						<option value="other-crimes-against-persons">Other Crimes Against Persons</option>
-						<option value="all-other-crimes">All Other Crimes</option>
+						<option id="aggravated-assault" value="aggravated-assault">Aggravated assault</option>
+						<option id="shoplifting" value="shoplifting">Shoplifting</option>
+						<option id="burglary-breaking-and-entering" value="burglary-breaking-and-entering">Burglary</option>
+						<option id="hacking-computer-invasion" value="hacking-computer-invasion">Hacking/computer invasion
+						</option>
+						<option id="arson" value="arson">Arson</option>
+						<option id="kidnapping-abduction" value="kidnapping-abduction">Kidnapping/abduction</option>
+						<option id="murder-and-nonnegligent-manslaughter" value="murder-and-nonnegligent-manslaughter">
+							Murder</option>
+						<option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
+						<option id="rape" value="rape">Rape</option>
+						<option id="destruction-damage-vandalism-of-property"
+							value="destruction-damage-vandalism-of-property">Property Damage</option>
 					</select>
-					<hr>
-					<ul>
-						<form id="crime-input" class="report">
-                            <label for="username">User Input:</label>
-                            <input type="text" id="date-input" name="username" placeholder="Date" required>
-                            <input type="text" id="street-input" name="username" placeholder="Street" required>
-                            <input type="text" id="city-input" name="username" placeholder="City" required>
-                            <input type="text" id="state-input" name="username" placeholder="State" required>
-                            <input type="text" id="zip-input" name="username" placeholder="Zip" required>
-                            <input type="text" id="description-input" name="username" placeholder="Description" required>
-                            <br>
-                            <input type="submit">
-                        </form>							
-						<br>
-						<li><form name="" method="" action=""><input type="file"></form></li>
-					</ul>
+				</div>
 			</div>
-		</div>
-	</div>
-	<br>
-	<div class="col-md-8">
-		<div class="map-header-container">
-			<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
-			<div class="form-group">
-				<select class="custom-select" id="category">
-					<option selected value="">Choose a crime</option>
-					<option id="aggravated-assault" value="aggravated-assault">Aggravated assault</option>
-					<option id="shoplifting" value="shoplifting">Shoplifting</option>
-					<option id="burglary-breaking-and-entering" value="burglary-breaking-and-entering">Burglary</option>
-					<option id="hacking-computer-invasion" value="hacking-computer-invasion">Hacking/computer invasion
-					</option>
-					<option id="arson" value="arson">Arson</option>
-					<option id="kidnapping-abduction" value="kidnapping-abduction">Kidnapping/abduction</option>
-					<option id="murder-and-nonnegligent-manslaughter" value="murder-and-nonnegligent-manslaughter">
-						Murder</option>
-					<option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
-					<option id="rape" value="rape">Rape</option>
-					<option id="destruction-damage-vandalism-of-property"
-						value="destruction-damage-vandalism-of-property">Property Damage</option>
-				</select>
+			<br>
+			<!-- Map container -->
+			<div class="map-container">
+				<div id="map"></div>
 			</div>
-		</div>
-		<!-- Tells user to click the map when a crime is searched -->
-		<div id="user-guide-container"></div>
-		<br>
-		<!-- Map container -->
-		<div class="map-container">
-			<div id="map"></div>
-		</div>
-		<br>
-		<!-- Graph and data container -->
-		<div class="data-container">
-			<div class="row">
-				<div class="col-md-4 data-col">
-					<div class="data-box">
-						<h4 class="crime-rate-header">2019 Crime Rates</h4>
-						<h5 id="state-name"></h5>
-						<p id="crime"></p>
-						<div class="rate-color">
-							<p id="rate"></p>
+			<br>
+			<!-- Graph and data container -->
+			<div class="data-container">
+				<div class="row">
+					<div class="col-md-4 data-col">
+						<div class="data-box">
+							<h4 class="crime-rate-header">2019 Crime Rates</h4>
+							<h5 id="state-name"></h5>
+							<p id="crime"></p>
+							<div class="rate-color">
+								<p id="rate"></p>
+							</div>
+							<p id="people"></p>
 						</div>
-						<p id="people"></p>
 					</div>
-				</div>
-				<div class="col-md-8 graph-col">
-					<div class="graph-box">
-						<div id="chartContainer" style="height: 15rem; width: 100%;"></div>
+					<div class="col-md-8 graph-col">
+						<div class="graph-box">
+							<div id="chartContainer" style="height: 15rem; width: 100%;"></div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<br>
 		</div>
-		<br>
 	</div>
-</div>
 </div>
 <footer>
 </footer>

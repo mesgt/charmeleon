@@ -7,6 +7,7 @@ const crimeDisplay = $("#crime");
 const rateDisplay = $("#rate");
 const peopleNum = $("#people");
 const rateColor = $(".rate-color");
+const dataContainer = $(".data-container");
 
 let offense_display;
 let offense;
@@ -24,6 +25,40 @@ function initMap() {
         center: { lat: 39.8283, lng: -98.5795 },
         zoom: 4,
     });
+  });
+  
+  map.data.addListener('mouseover', function(event) {
+    map.data.revertStyle();
+    map.data.overrideStyle(event.feature, {strokeWeight: 3, fillColor: "purple"});
+  });
+  
+  map.data.addListener('mouseout', function(event) {
+    map.data.revertStyle();
+  });
+
+  map.data.addListener('click', function(event) {
+    if (dataContainer.attr("class", "display") === "none") {
+      dataContainer.attr("class", "display") = "block";
+    }
+
+    offense = crimeCategorySelect.val();
+    offense_display = $("#" + offense).text();
+    let state = event.feature.getProperty('NAME');
+
+    $.ajax("/api/" + offense + "/" + state, {
+      type: "GET",
+    }).then(
+      function({state, crimeRate2019, crimeRate2018, crimeRate2017, crimeRate2016}) {
+
+        stateDisplay.text(state);
+        crimeDisplay.text(offense_display);
+
+        // case no data
+        if (crimeRate2019 === "No data to display") {
+          rateDisplay.text(crimeRate2019);
+          chartCont.text("No Data");
+          return;
+        }
 
     map.data.loadGeoJson(
         "https://storage.googleapis.com/mapsdevsite/json/states.js", { idPropertyName: "STATE" }
