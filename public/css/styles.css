@@ -140,9 +140,11 @@ span {
 }
 
 textarea {
-    width: 90%;
+    width: 97%;
     margin-left: 4px;
-    height: 20%;
+    height: 300px;
+    margin-left: 5px;
+    padding: 4px;
 }
 
 .container6 input {
@@ -157,6 +159,7 @@ textarea {
 .col-md-8 {
     margin-left: auto;
     margin-right: auto;
+    /* padding: 0px 0px; */
 }
 
 hr {
@@ -172,8 +175,7 @@ h1.title {
     background-color: #4472C4;
 }
 
-
-/* ******** Google map, google map header, and chart style HOME PAGE ************ */
+/* ********* Google map, google map header, and chart style HOME PAGE ************ */
 
 .map-header-container,
 .data-container {
@@ -316,4 +318,79 @@ h1.title {
     .container5 {
         height: 50%;
     }
+}
+
+/* page2 (local-data hbs) */
+@media screen and (max-width: 767px) {
+    .col-md-8 .container5 {
+        height: 400px;
+    }
+
+    .col-md-4 {
+        height: 50%;
+        margin-bottom: 15px;
+    }
+
+    .map-header-container .form-group {
+        margin: 0px;
+    }
+
+    div .container1 td {
+        height: 20px;
+    }
+    
+    .report-btn {
+        width: 60px;
+        height: 30px;
+        padding: 1px 2px;
+    }
+
+    .div .container1 {
+        text-align: center;
+    }
+
+    .container1 h2 {
+        text-align: center;
+    }
+
+    .container1 .form-group #userList {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    tr {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    table tbody {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row .col-md-8 .map-container {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1101px) {
+    div .container1 td {
+        height: 20px;
+        text-align: center;
+    }
+    
+    .report-btn {
+        width: 60px;
+        height: 30px;
+        padding: 1px 2px;
+    }
+
+    .container1 h2 {
+        text-align: center;
+    }
+
+    .container1 {
+        padding: 5px;
+    }
+
 }
