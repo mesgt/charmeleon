@@ -30,7 +30,7 @@ $(document).ready(function() {
                 type: "POST",
                 data: userData
                 }).then(function() {
-                    console.log("yes");
+                    console.log("working");
                 })
                 // .catch(handleErr);
                 // If there's an error, handle it

@@ -3,7 +3,7 @@ var db = require("../models");
 
 module.exports = function(app) {
     // POST route for saving a new report
-    app.post("/api/reports", function(req, res) {
+    app.post("/api/userReport", function(req, res) {
         db.Report.create({
             category: req.body.category,
             date: req.body.date,
