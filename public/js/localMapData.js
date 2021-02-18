@@ -1,8 +1,6 @@
 const crimeSearchBtn = $("#crime-search-btn");
 const crimeCategorySelect = $("#category");
 const dynamicContainer = $("#dynamic-container");
-// const db = require("../../routes/post-api-routes");
-// const safetyTip = require("../../models/safetyTip")
 
 let map;
 let mapMarkers = [];
@@ -36,11 +34,6 @@ $.ajax("/api/reports", {
         $("#userList").append(newRow);
     })
 
-    // $(`#${id}`).on("click", function(event) {
-    //     event.preventDefault();
-    //     console.log(`#${id}`);
-    //     window.location.href = "/userdata/:id";
-    // })
 })
 
 //safety tips
