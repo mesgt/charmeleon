@@ -8,7 +8,8 @@ let map;
 let mapMarkers = [];
 
 $(document).ready(function() {
-  initMap();
+    getSafetyTip();
+    initMap();
 });
 
 $.ajax("/api/reports", {
@@ -38,11 +39,8 @@ $.ajax("/api/reports", {
 
       newRow.append(newInput, newCrime, button);
       $("#userList").append(newRow);
+
     })
-        //     $("#safetyTipTitle").text(response.title);
-        //     $("#safetyTipBody").text(response.body);
-        // }).catch(err => (handleErr(err))
-        // );
 
     // $(`#${id}`).on("click", function(event) {
     //     event.preventDefault();
@@ -50,23 +48,15 @@ $.ajax("/api/reports", {
     //     window.location.href = "/userdata/:id";
     // })
 })
-  
-  
 
 //safety tips
 function getSafetyTip() {
-    $.ajax("/api/safetyNote/", {
+    $.ajax("/api/safetytips/", {
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         $("#safetyTipTitle").text(response.title);
         $("#safetyTipBody").text(response.body);
-    }).catch(err => (handleErr(err)));
-};
-
-function handleErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+    })
 };
 
 // google map
@@ -126,4 +116,4 @@ function initMap() {
         setMapOnAll(null);
         mapMarkers = [];
     }
-  }
+}
