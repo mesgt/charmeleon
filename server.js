@@ -28,7 +28,7 @@ require("./routes/safetyTipsGet.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({Sync:true}).then(function() {
   app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
