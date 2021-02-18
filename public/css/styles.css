@@ -115,6 +115,16 @@ input {
     /* text-align: center; */
 }
 
+.col-md-8 .container6 {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.col-md-8 .container6 p{
+    margin-bottom: 7px;
+    font-size: 30px;
+}
+
 textarea {
     width: 90%;
     margin-left: 4px;
