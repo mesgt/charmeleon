@@ -32,9 +32,14 @@ $.ajax("/api/reports", {
       button.attr("data-number", element.id);
       button.text(`\xa0 ${"?"} \xa0`);
       button.on("click", function() {
-          let id = $(this)
-          console.log(id);
-      location.replace("/userdata")
+        let id = $(this).attr("data-number");
+        var url = "/userdata/" + id;
+        $(location).attr('href',url);
+        // $.ajax("/userdata/" + id, {
+        //   method: "GET"
+        // }).then(function() {
+        //   console.log("yes");
+        // })
       });
 
       newRow.append(newInput, newCrime, button);
@@ -59,7 +64,8 @@ function getSafetyTip() {
     })
 };
 
-// google map
+$(document).ready(function() {initMap()})
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 39.742043, lng: -104.991531 },
