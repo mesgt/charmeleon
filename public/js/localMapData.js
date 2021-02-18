@@ -7,9 +7,7 @@ const dynamicContainer = $("#dynamic-container");
 let map;
 let mapMarkers = [];
 
-$(document).ready(function() {
-  initMap();
-});
+
 
 $.ajax("/api/reports", {
     method: "GET"
@@ -74,7 +72,8 @@ function handleErr(err) {
     $("#alert").fadeIn(500);
 };
 
-// google map
+$(document).ready(function() {initMap()})
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 39.742043, lng: -104.991531 },

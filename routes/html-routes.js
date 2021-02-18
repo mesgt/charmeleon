@@ -17,33 +17,21 @@ module.exports = function (app) {
     res.render("local-data", model);
   });
   
-  // app.get("/userdata", function(req, res) {
-  //   res.render("userdata");
-  // })
+
 
   app.get("/userdata/:id", function(req, res) {
-    db.Report.findOne({
+    console.log(req.params.id);
+    db.Report.findAll({
+      attributes: ['category', 'date', 'streetAddress', 'city', 'state', 'zip', 'description'],
       where: {
           id: req.params.id
       }
     }).then(function(dbPost) {
-        res.render("userdata", dbPost);
+      let newData = JSON.parse(JSON.stringify(dbPost))
+      
+      res.render("userdata", newData[0]);
     });
       
     });
-  // cms route loads cms.html
-//   app.get("/??", function (req, res) {
-//     res.sendFile(path.join(__dirname, "../public/???.html"));
-//   });
-
-//   // blog route loads blog.html
-//   app.get("/??", function (req, res) {
-//     res.sendFile(path.join(__dirname, "../public/???.html"));
-//   });
-
-  // placeholder route that loads individual user post to display details. If we have time.
-  // app.get("/placeholder/:id", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/???.html"));
-  // });
 
 };

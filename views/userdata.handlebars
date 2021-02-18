@@ -2,7 +2,7 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a href="#">
-                    <img src="../public/images/image.png" alt="See something say something img" width="50">
+                    <img src="/image.png" alt="See something say something img" width="50">
                 </a>
             </div>
             <div id="navbarBasicExample" class="navbar-menu">
@@ -25,7 +25,7 @@
             <div class="container6">
                 <div class="row">
                     <div class="col-md-4">
-                        <p>Category: </p>
+                        <p>Category: {{category}}</p>
                         <p>Date: </p>
                         <p>Street Address: </p>
                         <p>City: </p>
@@ -33,17 +33,17 @@
                         <p>ZIP: </p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
+							<p></p>
+							<p>{{date}}</p>
+							<p>{{streetAddress}}</p>
+							<p>{{city}}</p>
+							<p>{{state}}</p>
+							<p>{{zip}}</p>
                     </div>
                 </div>
                 <br>
-                <p>Description: </p>
-                <textarea></textarea>
+                <p>Description: {{description}}</p>
+
             </div>
             <br>
             <br>
