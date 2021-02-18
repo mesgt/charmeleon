@@ -1,4 +1,5 @@
-var path = require("path");
+// var path = require("path");
+var db = require("../models");
 
 module.exports = function (app) {
 
@@ -16,9 +17,20 @@ module.exports = function (app) {
     res.render("local-data", model);
   });
   
-  app.get("/userdata", function(req, res) {
-    res.render("userdata");
-  });
+  // app.get("/userdata", function(req, res) {
+  //   res.render("userdata");
+  // })
+
+  app.get("/userdata/:id", function(req, res) {
+    db.Report.findOne({
+      where: {
+          id: req.params.id
+      }
+    }).then(function(dbPost) {
+        res.render("userdata", dbPost);
+    });
+      
+    });
   // cms route loads cms.html
 //   app.get("/??", function (req, res) {
 //     res.sendFile(path.join(__dirname, "../public/???.html"));
