@@ -50,7 +50,7 @@ $.ajax("/api/reports", {
 
 //safety tips
 function getSafetyTip() {
-    $.ajax("/api/safetyNote/", {
+    $.ajax("/api/safetytips/", {
         method: "GET"
     }).then(function(response) {
         console.log(response);
