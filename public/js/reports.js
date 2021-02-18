@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     // Does a post to the report route.
     function reportCrime(category, date, streetAddress, city, state, zip, description) {
-        $.post("/api/userReport", {
+        $.post("/api/reports", {
                 category: category,
                 date: date,
                 streetAddress: streetAddress,
