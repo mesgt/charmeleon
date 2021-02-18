@@ -1,125 +1,52 @@
-<header>
-	<nav class="navbar" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand">
-			<a href="#">
-				<img src="image.png" alt="See something say something img" width="50">
-			</a>
-		</div>
-		<div id="navbarBasicExample" class="navbar-menu">
-			<div class="navbar-start">
-				<a href="/localdata" class="navbar-item">
-					View Local Data
-				</a>
-				<div class="navbar-item has-dropdown is-hoverable">
-				</div>
-			</div>
-		</div>
-			<h1 class="title">
-				See Something - Say Something
-			</h1>
-		</nav>
-	</header>
-	<br>
-	<div class="row">
-		<div class="col-md-4">
-			<input type="text" id="######" placeholder="Zip Code">
-			<br>
-			<br>
-			<div class="container1">
-				<h2>Report a crime: </h2>
-				<div class="form-group">
-					<select class="custom-select" id="sidebar-category">
-						<option selected value="">Choose a crime</option>
-						<option value="aggravated-assault">Aggrevated Assault</option>
-						<option value="arson">Arson</option>
-						<option value="burglary">Burglary</option>
-						<option value="auto-theft">Auto Theft</option>
-						<option value="drug-alcohol">Drug or Alcohol</option>
-						<option value="larceny">Larceny</option>
-						<option value="murder">Murder</option>
-						<option value="theft-from-motor-vehicle">Theft from Motor Vehicle</option>
-						<option value="sexual-assault">Sexual Assault</option>
-						<option value="public-disorder">Public Disorder</option>
-						<option value="robbery">Robbery</option>
-						<option value="traffic-accident">Traffic Accident</option>
-						<option value="white-collar-crime">White Collar Crime</option>
-						<option value="other-crimes-against-persons">Other Crimes Against Persons</option>
-						<option value="all-other-crimes">All Other Crimes</option>
-					</select>
-					<hr>
-					<ul>
-						<form id="form.report" action="/">
-							<label for="username">User Input:</label>
-							<input type="text" id="location" name="location" placeholder="Location" required>
-							<input type="text" id="date" name="date" placeholder="Date" required>
-							<input type="text" id="description" name="description" placeholder="Description" required>
-							<br>
-							<input type="submit">
-						</form>
-							<br>
-							<li><form name="" method="" action=""><input type="file"></form></li>
-					</ul>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="col-md-8">
-		<div class="map-header-container">
-			<p class="map-form-header"><em>Choose a crime and then click on the map to see data for each state</em></p>
-			<div class="form-group">
-				<select class="custom-select" id="category">
-					<option selected value="">Choose a crime</option>
-					<option id="aggravated-assault" value="aggravated-assault">Aggravated assault</option>
-					<option id="shoplifting" value="shoplifting">Shoplifting</option>
-					<option id="burglary-breaking-and-entering" value="burglary-breaking-and-entering">Burglary</option>
-					<option id="hacking-computer-invasion" value="hacking-computer-invasion">Hacking/computer invasion
-					</option>
-					<option id="arson" value="arson">Arson</option>
-					<option id="kidnapping-abduction" value="kidnapping-abduction">Kidnapping/abduction</option>
-					<option id="murder-and-nonnegligent-manslaughter" value="murder-and-nonnegligent-manslaughter">
-						Murder</option>
-					<option id="motor-vehicle-theft" value="motor-vehicle-theft">Motor vehicle theft</option>
-					<option id="rape" value="rape">Rape</option>
-					<option id="destruction-damage-vandalism-of-property"
-						value="destruction-damage-vandalism-of-property">Property Damage</option>
-				</select>
-			</div>
-		</div>
-		<!-- Tells user to click the map when a crime is searched -->
-		<div id="user-guide-container"></div>
-		<br>
-		<!-- Map container -->
-		{{!-- <div class="container2">
-			<div id="map"></div>
-		</div> --}}
-		<br>
-		<!-- Graph and data container -->
-		<div class="data-container">
-			<div class="row">
-				<div class="col-md-4 data-col">
-					<div class="data-box">
-						<h4 class="crime-rate-header">2019 Crime Rates</h4>
-						<h5 id="state"></h5>
-						<p id="crime"></p>
-						<div class="rate-color">
-							<p id="rate"></p>
-						</div>
-						<p id="people"></p>
-					</div>
-				</div>
-				<div class="col-md-8 graph-col">
-					<div class="graph-box">
-						<div id="chartContainer" style="height: 15rem; width: 100%;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br>
-	</div>
-</div>
-</div>
-<footer>
-</footer>
-<!--Text-->
-<script src="./js/crimeAdePage.js"></script>
-<script src="./js/reports.js"></script>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a href="#">
+                    <img src="/image.png" alt="See something say something img" width="50">
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/localdata" class="navbar-item">
+                        View Local Data
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                    </div>
+                </div>
+            </div>
+                <h1 class="title">
+                    See Something - Say Something
+                </h1>
+            </nav>
+        </header>
+        <br>
+        <br>
+        <div class="col-md-8">
+            <div class="container6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Category: {{category}}</p>
+                        <p>Date: </p>
+                        <p>Street Address: </p>
+                        <p>City: </p>
+                        <p>State: </p>
+                        <p>ZIP: </p>
+                    </div>
+                    <div class="col-md-8">
+							<p></p>
+							<p>{{date}}</p>
+							<p>{{streetAddress}}</p>
+							<p>{{city}}</p>
+							<p>{{state}}</p>
+							<p>{{zip}}</p>
+                    </div>
+                </div>
+                <br>
+                <p>Description: {{description}}</p>
+
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    </div>

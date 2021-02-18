@@ -8,7 +8,8 @@ let map;
 let mapMarkers = [];
 
 $(document).ready(function() {
-  initMap();
+    getSafetyTip();
+    initMap();
 });
 
 $.ajax("/api/reports", {
@@ -29,15 +30,22 @@ $.ajax("/api/reports", {
       button.addClass("report-btn");
       $(`button`).attr(`id`, element.id);
       button.attr("data-number", element.id);
-      button.text(`\xa0 ${"?"} \xa0`)
+      button.text(`\xa0 ${"?"} \xa0`);
+      button.on("click", function() {
+        let id = $(this).attr("data-number");
+        var url = "/userdata/" + id;
+        $(location).attr('href',url);
+        // $.ajax("/userdata/" + id, {
+        //   method: "GET"
+        // }).then(function() {
+        //   console.log("yes");
+        // })
+      });
 
       newRow.append(newInput, newCrime, button);
       $("#userList").append(newRow);
+
     })
-        //     $("#safetyTipTitle").text(response.title);
-        //     $("#safetyTipBody").text(response.body);
-        // }).catch(err => (handleErr(err))
-        // );
 
     // $(`#${id}`).on("click", function(event) {
     //     event.preventDefault();
@@ -45,26 +53,19 @@ $.ajax("/api/reports", {
     //     window.location.href = "/userdata/:id";
     // })
 })
-  
-  
 
 //safety tips
 function getSafetyTip() {
     $.ajax("/api/safetytips/", {
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         $("#safetyTipTitle").text(response.title);
         $("#safetyTipBody").text(response.body);
-    }).catch(err => (handleErr(err)));
+    })
 };
 
-function handleErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-};
+$(document).ready(function() {initMap()})
 
-// google map
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 39.742043, lng: -104.991531 },
@@ -121,4 +122,4 @@ function initMap() {
         setMapOnAll(null);
         mapMarkers = [];
     }
-  }
+}
