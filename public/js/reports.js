@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 $(document).ready(function() {
     var reportForm = $("form.report");
     var categoryInput = $("select#sidebar-category");
