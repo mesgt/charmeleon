@@ -1,7 +1,0 @@
-CREATE TABLE safetyNote
-(
-	id int NOT NULL AUTO_INCREMENT,
-	title VARCHAR(30) NOT NULL,
-	body text NOT NULL,
-	PRIMARY KEY (id)
-);
