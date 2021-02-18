@@ -16,7 +16,9 @@ module.exports = function (app) {
     res.render("local-data", model);
   });
   
-
+  app.get("/userdata", function(req, res) {
+    res.render("userdata");
+  });
   // cms route loads cms.html
 //   app.get("/??", function (req, res) {
 //     res.sendFile(path.join(__dirname, "../public/???.html"));
