@@ -96,6 +96,7 @@ function initMap() {
                     map: map,
                 });
                 marker.addListener("click", () => {
+                    setTimeout(function(){ infowindow.close(); }, 2000);
                     infowindow.open(map, marker);
                 })
                 mapMarkers.push(marker);
