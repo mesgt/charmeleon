@@ -1,8 +1,6 @@
 const crimeSearchBtn = $("#crime-search-btn");
 const crimeCategorySelect = $("#category");
 const dynamicContainer = $("#dynamic-container");
-// const db = require("../../routes/post-api-routes");
-// const safetyTip = require("../../models/safetyTip")
 
 let map;
 let mapMarkers = [];
@@ -30,7 +28,7 @@ $.ajax("/api/reports", {
       button.addClass("report-btn");
       $(`button`).attr(`id`, element.id);
       button.attr("data-number", element.id);
-      button.text(`\xa0 ${"?"} \xa0`);
+      button.text(`\xa0 ${"info"} \xa0`);
       button.on("click", function() {
         let id = $(this).attr("data-number");
         var url = "/userdata/" + id;
@@ -47,11 +45,6 @@ $.ajax("/api/reports", {
 
     })
 
-    // $(`#${id}`).on("click", function(event) {
-    //     event.preventDefault();
-    //     console.log(`#${id}`);
-    //     window.location.href = "/userdata/:id";
-    // })
 })
 
 //safety tips
@@ -103,6 +96,7 @@ function initMap() {
                     map: map,
                 });
                 marker.addListener("click", () => {
+                    setTimeout(function(){ infowindow.close(); }, 2000);
                     infowindow.open(map, marker);
                 })
                 mapMarkers.push(marker);

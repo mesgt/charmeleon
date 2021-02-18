@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+.title {
+    margin-bottom: 1rem;
+}
+
 .container {
     background-color: #4472C4;
 }
@@ -15,6 +19,11 @@ header {
     background-color: #4472C4;
     /* margin-left: auto;
     margin-right: auto; */
+}
+
+.report-a-crime {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 input {
@@ -30,8 +39,6 @@ input {
 
 .container1 input {
     width: 97%;
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 .navbar {
@@ -54,16 +61,23 @@ input {
     background-color: #7F7F7F;
 }
 
+span {
+    font-weight: bold;
+}
+
 .container1 {
     border-style: solid;
     border-width: 1px;
-    height: 450px;
-    padding: 1px 2px;
+    height: 50rem;
+    padding: 1rem;
     border-radius: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
     width: 100%;
+    height: 100%;
     background-color: #7F7F7F;
+}
+
+.aside-col {
+    height: 100vh;
 }
 
 .container2 {
@@ -105,7 +119,7 @@ input {
 .container6 {
     border-style: solid;
     border-width: 1px;
-    height: 700px;
+    height: 80%;
     padding: 1px 2px;
     border-radius: 2px;
     padding: 5em 2em;
@@ -122,13 +136,15 @@ input {
 
 .col-md-8 .container6 p{
     margin-bottom: 7px;
-    font-size: 30px;
+    font-size: 2.5vw;
 }
 
 textarea {
-    width: 90%;
+    width: 97%;
     margin-left: 4px;
-    height: 20%;
+    height: 300px;
+    margin-left: 5px;
+    padding: 4px;
 }
 
 .container6 input {
@@ -143,6 +159,7 @@ textarea {
 .col-md-8 {
     margin-left: auto;
     margin-right: auto;
+    /* padding: 0px 0px; */
 }
 
 hr {
@@ -158,7 +175,6 @@ h1.title {
     background-color: #4472C4;
 }
 
-
 /* ********* Google map, google map header, and chart style HOME PAGE ************ */
 
 .map-header-container,
@@ -171,7 +187,12 @@ h1.title {
     background-color: #2F5597;
 }
 
-.map-form-header {
+.data-container {
+    display: none;
+}
+
+.map-form-header,
+.safety-tips {
     color: #A5A5A5;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -223,6 +244,34 @@ h1.title {
     padding-left: 7px;
 }
 
+/* page 2 sidebar */
+
+.user-reported {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.safety-tips,
+.emergency-contact {
+    font-size: 1.6rem;
+    color: rgb(211, 211, 211);
+}
+
+.safety-tip-container {
+    text-align: center;
+}
+
+.safety-tip-container h5 {
+    font-size: 1.2rem;
+}
+
+.emergency-contact-container {
+    text-align: center;
+}
+
+.emergency-contact-container div {
+    margin-top: 1rem;
+}
 
 /* LOCAL MAP STYLES */
 
@@ -230,23 +279,36 @@ h1.title {
 .map-container {
     border-style: solid;
     border-width: 1px;
-    height: 80%;
+    height: 65%;
     padding: 1px 2px;
     border-radius: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
     width: 100%;
     background-color: #A5A5A5;
 }
 
 #dynamic-container {
     text-align: center;
-    color: #474747;
+    color: #000000;
     font-style: italic;
     margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1000px) {
+    .crime-rate-header {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 600px) {
+    nav {
+        text-align: center;
+    }
+
+    .aside-col {
+        margin-bottom: 1.5rem;
+    }
+
     /* google map */
     #map {
         height: 100%;
@@ -256,4 +318,79 @@ h1.title {
     .container5 {
         height: 50%;
     }
+}
+
+/* page2 (local-data hbs) */
+@media screen and (max-width: 767px) {
+    .col-md-8 .container5 {
+        height: 400px;
+    }
+
+    .col-md-4 {
+        height: 50%;
+        margin-bottom: 15px;
+    }
+
+    .map-header-container .form-group {
+        margin: 0px;
+    }
+
+    div .container1 td {
+        height: 20px;
+    }
+    
+    .report-btn {
+        width: 60px;
+        height: 30px;
+        padding: 1px 2px;
+    }
+
+    .div .container1 {
+        text-align: center;
+    }
+
+    .container1 h2 {
+        text-align: center;
+    }
+
+    .container1 .form-group #userList {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    tr {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    table tbody {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row .col-md-8 .map-container {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1101px) {
+    div .container1 td {
+        height: 20px;
+        text-align: center;
+    }
+    
+    .report-btn {
+        width: 60px;
+        height: 30px;
+        padding: 1px 2px;
+    }
+
+    .container1 h2 {
+        text-align: center;
+    }
+
+    .container1 {
+        padding: 5px;
+    }
+
 }
