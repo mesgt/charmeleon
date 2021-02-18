@@ -25,7 +25,7 @@ $(document).ready(function() {
             return;
         }
 
-        
+        // might need to change table to "reports"
             $.ajax("/api/userReport", {
                 type: "POST",
                 data: userData
@@ -49,6 +49,23 @@ $(document).ready(function() {
     });
 
     // Does a post to the report route.
+
+//     function reportCrime(category, date, streetAddress, city, state, zip, description) {
+//         $.post("/api/reports", {
+//                 category: category,
+//                 date: date,
+//                 streetAddress: streetAddress,
+//                 city: city,
+//                 state: state,
+//                 zip: zip,
+//                 description: description,
+//             }).then(function(data) {
+//                 console.log(data);
+//             })
+            // .catch(handleErr);
+            // If there's an error, handle it
+//     }
+
 
     // function handleErr(err) {
     //     $("#alert .msg").text(err.responseJSON);

@@ -3,7 +3,7 @@ var db = require("../models");
 
 module.exports = function(app) {
     // POST route for saving a new report
-    app.post("/api/userReport", function(req, res) {
+    app.post("/api/reports", function(req, res) {
         db.Report.create({
             category: req.body.category,
             date: req.body.date,
@@ -20,15 +20,15 @@ module.exports = function(app) {
     });
 
     // GET routes for user reported data
-    // app.get("/api/userReport", function(req, res) {
-    //     db.Report.findAll({}).then(function(dbPost) {
+    app.get("/api/reports", function(req, res) {
+        db.Report.findAll({}).then(function(dbPost) {
             // console.log(Report);
-        //     res.json(dbPost);
-        // });
+            res.json(dbPost);
+        });
 
-    // });
+    });
 
-    app.get("/api/userReport/:id", function(req, res) {
+    app.get("/api/reports/:id", function(req, res) {
         db.Report.findOne({
             where: {
                 id: req.params.id
@@ -39,7 +39,7 @@ module.exports = function(app) {
     });
 
     // DELETE route for deleting posts
-    app.delete("/api/userReport/:id", function(req, res) {
+    app.delete("/api/reports/:id", function(req, res) {
         db.Report.destroy({
             where: {
                 id: req.params.id
