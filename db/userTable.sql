@@ -1,4 +1,6 @@
-CREATE TABLE userReport
+DROP DATABASE IF exists crimeAde;
+CREATE DATABASE crimeAde;
+USE crimeAde;
 (
 	id int NOT NULL AUTO_INCREMENT,
 	category text NOT NULL, -- from drop down menu
@@ -11,4 +13,4 @@ CREATE TABLE userReport
 	PRIMARY KEY (id)
 );
 
-select * from userReport
+select * from Reports;
