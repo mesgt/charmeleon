@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // API CALL\\
   $.ajax({
-    url: queryFoodURL,
+    url: queryURL,
     method: "GET",
   }).then(function (response) {
     console.log(response)

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Report = sequelize.define("Report", {
-            category: { //from drop down menu??
+            category: { 
                 type: DataTypes.TEXT,
                 allowNull: false,
                 len: [1]

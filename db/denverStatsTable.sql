@@ -1,25 +1,25 @@
-DROP TABLE IF EXISTS crimeDenver;
+DROP TABLE IF EXISTS crimeDenvers;
 
-SELECT * from crimeDenver;
+SELECT * from crimeDenvers;
 
-CREATE TABLE crimeDenver
-(
-	id int NOT NULL AUTO_INCREMENT,
-	offense_type_id text,
-	offense_category_id text,
-    first_occurrence_date DATETIME,
-    incident_address text NOT NULL,
-    geo_x int NOT NULL, 
-    geo_y int NOT NULL, 
-    geo_lon decimal(23,7) NOT NULL,
-    geo_lat decimal(23,7) NOT NULL,
- 	PRIMARY KEY (id)
-);
+-- CREATE TABLE crimeDenvers
+-- (
+-- 	id int NOT NULL AUTO_INCREMENT,
+-- 	offense_type_id text,
+-- 	offense_category_id text,
+--     first_occurrence_date DATETIME,
+--     incident_address text NOT NULL,
+--     geo_x int NOT NULL, 
+--     geo_y int NOT NULL, 
+--     geo_lon decimal(23,7) NOT NULL,
+--     geo_lat decimal(23,7) NOT NULL,
+--  	PRIMARY KEY (id)
+-- );
 
 -- Prior to uploading data, add cleanCrime.csv to the following folder: "C:\ProgramData\MySQL\MySQL Server 8.0\Data\crimeade\cleanCrime.csv"
 
 LOAD DATA INFILE 'cleanCrime.csv'
-INTO TABLE crimeDenver
+INTO TABLE crimeDenvers
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
