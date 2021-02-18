@@ -21,14 +21,12 @@
 </header>
 <br>
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-4 aside-col">
+		<div class="container1">
 		<p><span class ="date" id="datetime"></span></p><script>var dt = new Date();
 		document.getElementById("datetime").innerHTML=dt.toLocaleString();</script> 
 		<br>
-		<br>
-		<div class="container1">
-			<h2>Reported Locally:</h2>
-			<p>List of crimes reported on the app:</p>
+			<h2 class="user-reported">User reported crimes:</h2>
 			<div class="form-group">
 				<table id="userList">
 					{{!-- <form id="crime-input" action="/action_page.php">
@@ -60,38 +58,41 @@
 				</select>
 				<button id="crime-search-btn" type="submit">Search</button>
 			</div>
-		</div> <br>
+		</div> 
 		<div id="dynamic-container"></div>
 		<!-- Map container -->
 		<div class="container5">
 			<div id="map"></div>
 		</div>
-		
-		<br>
-		<div class="map-header-container">
-			<p class="map-form-header"><em>Safety Tips</em></p>
-			<div class="form-group">
-				<div>
-					<h5 id="safetyTipTitle"></h5>
-				</div>
-				<div>
-					<p id="safetyTipBody"></p>
-				</div>
-			</div>
-		</div> 
-		<br>
-		<div class="map-header-container">
-			<p class="map-form-header"><em>Local Emergency Contact information</em></p>
-			<div class="form-group">
-			<p class="emergency-info"><em>Denver Health Emergency Department: (303) 436-6000</em>
-			<br>
-			<em>Denver Police Department: (720) 913-0400</em>
-			<br>
-			<em>Denver Fire Department: Call 3-1-1</em>
-			</p>
-			</div>
-		</div> 
 	</div>
+</div>
+<br>
+<div class="row">
+	<div class="map-header-container">
+		<p class="safety-tips"><em>Safety Tips</em></p>
+		<div class="form-group">
+			<div class="safety-tip-container">
+				<h5 id="safetyTipTitle"></h5>
+				<p id="safetyTipBody"></p>
+			</div>
+		</div>
+	</div> 
+</div>
+<br>
+<div class="row">
+	<div class="map-header-container">
+		<div class="emergency-contact-container">
+			<p class="emergency-contact"><em>Local Emergency Contact information</em></p>
+			<div class="form-group">
+				<p class="emergency-info"><em>Denver Health Emergency Department: (303) 436-6000</em>
+				<br>
+				<em>Denver Police Department: (720) 913-0400</em>
+				<br>
+				<em>Denver Fire Department: Call 3-1-1</em>
+				</p>
+			</div>
+		</div>
+	</div> 
 </div>
 <footer>
 </footer>

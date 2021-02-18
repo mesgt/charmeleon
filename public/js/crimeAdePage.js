@@ -19,6 +19,7 @@ const crimeDisplay = $("#crime");
 const rateDisplay = $("#rate");
 const peopleNum = $("#people");
 const rateColor = $(".rate-color");
+const dataContainer = $(".data-container");
 
 let offense_display;
 let offense;
@@ -65,6 +66,10 @@ function initMap() {
   });
 
   map.data.addListener('click', function(event) {
+    if (dataContainer.attr("class", "display") === "none") {
+      dataContainer.attr("class", "display") = "block";
+    }
+
     offense = crimeCategorySelect.val();
     offense_display = $("#" + offense).text();
     let state = event.feature.getProperty('NAME');

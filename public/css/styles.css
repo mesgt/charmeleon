@@ -171,7 +171,12 @@ h1.title {
     background-color: #2F5597;
 }
 
-.map-form-header {
+.data-container {
+    display: none;
+}
+
+.map-form-header,
+.safety-tips {
     color: #A5A5A5;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -223,6 +228,34 @@ h1.title {
     padding-left: 7px;
 }
 
+/* page 2 sidebar */
+
+.user-reported {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.safety-tips,
+.emergency-contact {
+    font-size: 1.6rem;
+    color: rgb(211, 211, 211);
+}
+
+.safety-tip-container {
+    text-align: center;
+}
+
+.safety-tip-container h5 {
+    font-size: 1.2rem;
+}
+
+.emergency-contact-container {
+    text-align: center;
+}
+
+.emergency-contact-container div {
+    margin-top: 1rem;
+}
 
 /* LOCAL MAP STYLES */
 
