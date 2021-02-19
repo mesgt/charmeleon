@@ -61,6 +61,10 @@ input {
     background-color: #7F7F7F;
 }
 
+span {
+    font-weight: bold;
+}
+
 .container1 {
     border-style: solid;
     border-width: 1px;
@@ -115,7 +119,7 @@ input {
 .container6 {
     border-style: solid;
     border-width: 1px;
-    height: 700px;
+    height: 80%;
     padding: 1px 2px;
     border-radius: 2px;
     padding: 5em 2em;
@@ -132,14 +136,9 @@ input {
 
 .col-md-8 .container6 p{
     margin-bottom: 7px;
-    font-size: 30px;
+    font-size: 2.5vw;
 }
 
-textarea {
-    width: 90%;
-    margin-left: 4px;
-    height: 20%;
-}
 
 .container6 input {
     width: 50%;
@@ -150,9 +149,17 @@ textarea {
     margin-bottom: 7px;
 }
 
+#crime-input input#description-input {
+    width: 97%;
+    margin-left: 4px;
+    height: 300px;
+    margin-left: 5px;
+}
+
 .col-md-8 {
     margin-left: auto;
     margin-right: auto;
+    /* padding: 0px 0px; */
 }
 
 hr {
@@ -167,7 +174,6 @@ h1.title {
     /* padding-right: 750px; */
     background-color: #4472C4;
 }
-
 
 /* ********* Google map, google map header, and chart style HOME PAGE ************ */
 
@@ -273,7 +279,7 @@ h1.title {
 .map-container {
     border-style: solid;
     border-width: 1px;
-    height: 80%;
+    height: 86.5%;
     padding: 1px 2px;
     border-radius: 2px;
     width: 100%;
@@ -282,7 +288,7 @@ h1.title {
 
 #dynamic-container {
     text-align: center;
-    color: #474747;
+    color: #000000;
     font-style: italic;
     margin-bottom: 1rem;
 }
@@ -312,4 +318,79 @@ h1.title {
     .container5 {
         height: 50%;
     }
+}
+
+/* page2 (local-data hbs) */
+@media screen and (max-width: 767px) {
+    .col-md-8 .container5 {
+        height: 400px;
+    }
+
+    .col-md-4 {
+        height: 50%;
+        margin-bottom: 15px;
+    }
+
+    .map-header-container .form-group {
+        margin: 0px;
+    }
+
+    div .container1 td {
+        height: 20px;
+    }
+    
+    .report-btn {
+        width: 60px;
+        height: 30px;
+        padding: 1px 2px;
+    }
+
+    .div .container1 {
+        text-align: center;
+    }
+
+    .container1 h2 {
+        text-align: center;
+    }
+
+    .container1 .form-group #userList {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    tr {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    table tbody {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row .col-md-8 .map-container {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1101px) {
+    div .container1 td {
+        height: 20px;
+        text-align: center;
+    }
+    
+    .report-btn {
+        width: 60px;
+        height: 30px;
+        padding: 1px 2px;
+    }
+
+    .container1 h2 {
+        text-align: center;
+    }
+
+    .container1 {
+        padding: 5px;
+    }
+
 }
