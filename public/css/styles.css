@@ -141,12 +141,11 @@ span {
     margin-bottom: 7px;
 }
 
-#crime-input input#description-input {
+#crime-input #description-input {
     width: 97%;
     margin-left: 4px;
-    height: 150px;
     margin-left: 5px;
-    padding: 0px 0px 270px 3px;
+    padding: 0px 0px 170px 3px;
     word-break: break-all;
 }
 
