@@ -1,48 +1,57 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # CrimeAde to the Rescue
 
-Your local crime tracker around Denver, Colorado. Be active. Be safe.
+Your local crime tracker around Denver, Colorado. Know your data. Be safe.
+
+## Deployed Link
+
+Heroku: https://infinite-savannah-89804.herokuapp.com/
+
+![Demo](./public/images/demo1.gif)
 
 # Application Details
 
 ## Purpose
 
-CrimeAde is a mobile-friendly app that allows a user to be more aware of the crimes around them. It also lets a user enter a crime by its crime type followed by where it happened at and telling other users of these crimes. A user's crime-warning message stays anonymous so no one will know who reported it that way snitches won't end up in stitches. However, if a user just wants to view the crimes in their local area, they can navigate to the type of crime that occurred based on the reportings. ****
+CrimeAde is a mobile-friendly app that allows a user to be more aware of the crimes around them. Our goal is to help users be safe by becoming more informed. 
 
 ## Description
+Our app lets users view crime data for each state from the FBI on a google map, as well as local, location-based crime data for the Denver area. Additionally, users may enter their own data if they were a victim of a crime. For security reasons, all user data is kept anonymous. Since our goal is to help users be safe, our app provides randomized safety tips on each reload, as well as local emergency numbers. Currently our local and user data side focuses on users in the Denver area. 
 
+![Demo](./public/images/gif2.gif)
 
 
 ## Technologies
 
-<li>HTML5
-<li>CSS3
-<li>Bulma
-<li>Javascript/jQuery
-<li>APIs
-<li>GitHub
-<li>Heroku
-<li>Visual Studio Code
-<li>MySQL
-<li>Postman?
+<li>Bulma (CSS framework)
+<li>jQuery 
 <li>Node.js
-<li>
-<li>
-<li>
+<li>MySQL
+<li>Sequelize
+<li>Express
+
 
 ## Future Development
 
-The future development plans for crimeAde is to incorporate a log in page so that random users won't be able to delete other user's crime entry. It'll also have a real-time chat feature that others can message and interact with each other. This will be handy so that a user wont have to constantly refresh their server to see new messages and to stay aware of their surroundings. ****
+Ideas for future development include a login function and the ability for users to create an account, as well as a chat feature. Additionally we would like to add map data for more cities than just Denver, and be able to integrate the user data with the local map data. 
 
-## Screenshots
+## License
+Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
 
-![]() ****
-
-## Demonstration?
-
-****Link or pre-recorded video showing the functionality of the page?
-
-## Deployed Links
-
-Heroku: https://infinite-savannah-89804.herokuapp.com/
+## Github and contributors
 
 GitHub: https://github.com/mesgt/charmeleon
+
+Contributors: 
+
+[Fong Vang](https://github.com/fongvang09)
+
+[Maria Sargent](https://github.com/mesgt)
+
+[Lydia Newman-Heggie](https://github.com/lnewmanheggie)
+
+[Gustaf Campoy](https://github.com/Gustaf-987)
+
+[Will Heyer](https://github.com/WillHeyer)
+
