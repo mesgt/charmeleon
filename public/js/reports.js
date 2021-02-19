@@ -28,7 +28,6 @@ $(document).ready(function() {
             type: "POST",
             data: userData
         }).then(function(response) {
-            console.log(response);
             window.location.assign("/localdata")
         })
     })
