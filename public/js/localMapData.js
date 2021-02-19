@@ -13,7 +13,7 @@ $(document).ready(function() {
 $.ajax("/api/reports", {
     method: "GET"
 }).then(function(response) {
-    response = response.slice(0, 10);
+    response = response.slice(0, 25);
     response.forEach(element => {
       let newRow = $("<tr>");
       let newInput = $("<td>");
