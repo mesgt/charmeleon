@@ -44,6 +44,8 @@ Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
 ## GitHub and Contributors
 
 https://github.com/mesgt/charmeleon
+
+<br>
  
 [Fong Vang](https://github.com/fongvang09)
 
