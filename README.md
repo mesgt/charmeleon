@@ -45,11 +45,16 @@ Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
 
 https://github.com/mesgt/charmeleon
  
-<li>[Fong Vang](https://github.com/fongvang09)</li>
-<li>[Maria Sargent](https://github.com/mesgt)</li>
-<li>[Lydia Newman-Heggie](https://github.com/lnewmanheggie)</li>
-<li>[Gustaf Campoy](https://github.com/Gustaf-987)</li>
-<li>[Will Heyer](https://github.com/WillHeyer)</li>
+[Fong Vang](https://github.com/fongvang09)
+
+[Maria Sargent](https://github.com/mesgt)
+
+[Lydia Newman-Heggie](https://github.com/lnewmanheggie)
+
+[Gustaf Campoy](https://github.com/Gustaf-987)
+
+[Will Heyer](https://github.com/WillHeyer)
+
 
 ## Contributing
 
